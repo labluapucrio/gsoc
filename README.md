@@ -18,6 +18,7 @@ Please use our [application template](http://www.lua.inf.puc-rio.br/gsoc/apply20
 *   [Port Lua Test Suite to Lunatik](#lunatik-test)
 *   [Lunatik binding for Human Interface Devices (HID) drivers](#lunatik-hid)
 *   [Lunatik package for Linux distros](#lunatik-distro)
+*   [Integrate LuaSocket and LuaSec](#integrate-luasocket-and-luasec)
 
 * * *
 
@@ -180,5 +181,38 @@ The purpose of this project is to create Lunatik packages for some Linux distrib
 
 *  [Marcel Moura](mailto:marcel.stanley@gmail.com)
 *  [Lourival Vieira Neto](mailto:lourival.neto@gmail.com)  
+
+* * *
+
+### Integrate LuaSocket and LuaSec
+
+LuaSocket is the defacto standard socket library for Lua. It is cross-platform and widespread in its use. When it was created TLS wasn't as widely used as today (probably didn't even exist). The LuaSec library filled in this gap several years later. The library builds on top of LuaSocket and is tightly coupled. However, in todays world TLS is everywhere, and having 2 seperate libraries makes less sense and adds to friction for users.
+
+The purpose of this project is to integrate the 2 libraries such that TLS support becomes an integral part of LuaSocket.
+
+#### Expected results
+
+*   LuaSec integrated into the LuaSocket code base
+*   Optionally be able to exclude TLS support for use cases that don't need/cannot use OpenSSL intgeration
+*   Documentation and templates
+*   Unix and Windows
+
+#### Prerequisites
+
+*   Lua and C programming languages
+*   Experience with socket programming
+*   Experience with the Lua-C API (nice to have)
+
+#### Skill level
+
+*  Intermediate
+
+#### Project size
+
+*  Small (175 hours)
+
+#### Mentors
+
+*  t.b.d.
 
 * * *
