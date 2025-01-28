@@ -18,6 +18,7 @@ Please use our [application template](http://www.lua.inf.puc-rio.br/gsoc/apply20
 *   [Port Lua Test Suite to Lunatik](#lunatik-test)
 *   [Lunatik binding for Human Interface Devices (HID) drivers](#lunatik-hid)
 *   [Lunatik package for Linux distros](#lunatik-distro)
+*   [Http client for Lua](#http-client-for-Lua)
 
 * * *
 
@@ -180,5 +181,37 @@ The purpose of this project is to create Lunatik packages for some Linux distrib
 
 *  [Marcel Moura](mailto:marcel.stanley@gmail.com)
 *  [Lourival Vieira Neto](mailto:lourival.neto@gmail.com)  
+
+* * *
+
+### Http client for Lua
+
+The OpenResty http client; [`lua-resty-http`](https://github.com/ledgetech/lua-resty-http) is probably one of the best http clients written in Lua. But it is only available for [OpenResty](https://github.com/openresty/openresty). Other clients, like the ones bundled with [LuaSocket](https://github.com/lunarmodules/luasocket), [LuaSec](https://github.com/lunarmodules/luasec), or [Copas](https://github.com/lunarmodules/copas) are less feature rich.
+
+The purpose of this project is to modify the client such that it can also be used with other Lua based socket libraries, making it available to a wider audience.
+
+#### Expected results
+
+*   Abstract the socket implementation away from the library, such that it becomes pluggable
+*   No negative performance impact on the OpenResty implementation, which is its main audience
+*   Replace coroutine based code with regular functions since the OpenResty Coroutines are not compatible with plain Lua
+
+#### Prerequisites
+
+*   Lua programming languages
+*   Experience with sockets (nice to have)
+*   Experience with http (nice to have)
+
+#### Skill level
+
+*  Beginner
+
+#### Project size
+
+*  Medium (120 hours)
+
+#### Mentors
+
+*  [Thijs Schreijer](mailto:thijs@thijsschreijer.nl)
 
 * * *
