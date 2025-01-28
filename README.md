@@ -18,6 +18,7 @@ Please use our [application template](http://www.lua.inf.puc-rio.br/gsoc/apply20
 *   [Port Lua Test Suite to Lunatik](#lunatik-test)
 *   [Lunatik binding for Human Interface Devices (HID) drivers](#lunatik-hid)
 *   [Lunatik package for Linux distros](#lunatik-distro)
+*   [Terminal UI library for Lua](#terminal-ui-library-for-lua)
 
 * * *
 
@@ -180,5 +181,44 @@ The purpose of this project is to create Lunatik packages for some Linux distrib
 
 *  [Marcel Moura](mailto:marcel.stanley@gmail.com)
 *  [Lourival Vieira Neto](mailto:lourival.neto@gmail.com)  
+
+* * *
+
+### Terminal UI library for Lua
+
+Lua has several core libraries that work across platforms; luasocket (networking), luafilesystem (file system), and luasystem (time, random, terminal). The latter library, luasystem, provides the primitives to handle terminal operations, albeit they are fundamentally different on Posix and Windows based systems.
+
+The purpose of this project is to create a new library that builds on luasystems terminal primitives to build basic UI elements for user interaction in a cross-platform way. This should not be anything like curses, but the simple user interactions like;
+
+- headers and footers
+- progress indicators/bars
+- prompts; yes/no, ok/cancel
+- reading line inputs; reading a filename or other strings
+- hidden inputs; for secrets
+- etc.
+
+#### Expected results
+
+*   a new library build on top of LuaSystem
+*   Windows and Posix
+*   API design with consistency across platforms
+*   Documentation and examples
+
+#### Prerequisites
+
+*   Lua programming language
+*   Experience with terminals (nice to have)
+
+#### Skill level
+
+*  Beginner
+
+#### Project size
+
+*  Small (90 hours)
+
+#### Mentors
+
+*  [Thijs Schreijer](mailto:thijs@thijsschreijer.nl)
 
 * * *
