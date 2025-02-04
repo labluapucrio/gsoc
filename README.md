@@ -19,6 +19,7 @@ Please use our [application template](http://www.lua.inf.puc-rio.br/gsoc/apply20
 *   [Lunatik binding for Human Interface Devices (HID) drivers](#lunatik-hid)
 *   [Lunatik package for Linux distros](#lunatik-distro)
 *   [Terminal UI library for Lua](#terminal-ui-library-for-lua)
+*   [Conntrack and NAT support for Lunatik](#conntrack-and-nat-support-for-lunatik)
 
 * * *
 
@@ -220,5 +221,47 @@ The purpose of this project is to create a new library that builds on luasystems
 #### Mentors
 
 *  [Thijs Schreijer](mailto:thijs@thijsschreijer.nl)
+
+* * *
+
+### Conntrack and NAT support for Lunatik
+
+Connection tracking (conntrack) is a fundamental component of the Linux kernel's networking stack. It is part of the Netfilter framework and is responsible for monitoring active network connections passing through the system. Conntrack maintains a state table, allowing the kernel to track packets as part of a flow and apply connection-oriented filtering, NAT (Network Address Translation), and stateful firewalling.
+
+NAT is used to modify IP addresses and ports in packet headers to facilitate address translation, load balancing, and security enforcement. The Linux kernel provides APIs to manipulate NAT and connection tracking through the Netfilter framework.
+
+The purpose of this project is to port conntrack and NAT data structures and kernel APIs to lunatik. These are present under:
+*   `net/netfilter/conntrack.h`
+*   `net/netfilter/nf_conntrack_common.h`
+*   `net/netfilter/conntrack_tuple.h`
+*   `net/netfilter/nf_conntrack_core.h`
+*   `net/netfilter/nf_nat.h`
+
+This projects builds upon the GSoC 2024 Project ['Lunatik binding for Netfilter'](https://summerofcode.withgoogle.com/archive/2024/projects/BIJAPZjf). For complete reference on the relevant kernel headers and data structures, refer to the following [gist](https://gist.github.com/sheharyaar/cbbd43037fa43fd391e52964347a2bc9).
+
+#### Expected results
+
+*   Allow fetching the conntrack entries and connection information
+*   Ability to conntrack add entries from lua programs that need to perform NAT. Example use case - L7 load balancing using netfilter in lua
+*   Ability to perform NAT for atleast inet protocols
+
+#### Prerequisites
+
+*   Lua and C programming languages
+*   Linux Networking
+*   Experience with Linux Kernel (highly desirable)
+*   Experience with Netfilter subsystem (good to have)
+
+#### Skill level
+
+*  Challenging
+
+#### Project size
+
+*  Medium (175 hours) or Large (350 hours)
+
+#### Mentors
+
+*  [Lourival Vieira Neto](mailto:lourival.neto@gmail.com) and [Mohammad Shehar Yaar Tausif](mailto:sheharyaar48@gmail.com)
 
 * * *
