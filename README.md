@@ -20,6 +20,7 @@ Please use our [application template](http://www.lua.inf.puc-rio.br/gsoc/apply20
 *   [Lunatik package for Linux distros](#lunatik-distro)
 *   [Terminal UI library for Lua](#terminal-ui-library-for-lua)
 *   [Conntrack and NAT support for Lunatik](#conntrack-and-nat-support-for-lunatik)
+*   [Prepared Statements for LuaSQL](#luasql-prepared-statemets)
 
 * * *
 
@@ -263,5 +264,40 @@ This projects builds upon the GSoC 2024 Project ['Lunatik binding for Netfilter'
 #### Mentors
 
 *  [Lourival Vieira Neto](mailto:lourival.neto@gmail.com) and [Mohammad Shehar Yaar Tausif](mailto:sheharyaar48@gmail.com)
+
+* * *
+
+### Add support for prepared statements for LuaSQL
+
+['LuaSQL'](https://github.com/lunarmodules/luasql) is a generic interface from Lua to a DBMS. It aims at portability over performance, but it allows extensions to suit the particularities of each DBMS.
+
+The inclusion of support for prepared statements in LuaSQL has been discussed thoroughly some time ago, but since each DBMS offers very different APIs there is no standard that could be defined to assure portability between them. Anyway the demand persists.
+
+This project proposes the addition of a minimal API that would allow each driver to offer prepared statements according to its DBMS restrictions and mechanisms.
+
+#### Expected results
+
+*   Propose a new API that would be flexibly enough to cover the main features of each database respecting each different mechanisms of defining prepared statements
+*   Implement the new API into one or more drivers
+*   Test and document everything
+
+#### Prerequisites
+
+*   C programming languages
+*   Experience with any database C API (highly desirable)
+*   Experience with Lua-C API (highly desirable)
+*   Experience with Lua (good to have)
+
+#### Skill level
+
+*  Challenging
+
+#### Project size
+
+*  Large (350 hours)
+
+#### Mentors
+
+*  [Tomás Guisasola](mailto:tomasguisasola@gmail.com)
 
 * * *
