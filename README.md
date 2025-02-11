@@ -9,7 +9,7 @@ In this page we introduce some of the projects that are are working with us this
 
 If you are a contributor candidate, feel free to get in touch with us via our [mailing list](mailto:labluagsoc@googlegroups.com) or by sending an email to one of our mentors. You can apply using one of the ideas in the list or you can bring your own idea. Either way, don't leave it to the last minute :)
 
-Please use our [application template](http://www.lua.inf.puc-rio.br/gsoc/apply2024.html) to prepare your proposal.
+Please use our [application template](/apply.md) to prepare your proposal.
 
 * * *
 
