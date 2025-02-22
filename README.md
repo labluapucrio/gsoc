@@ -14,7 +14,6 @@ Please use our [application template](/apply.md) to prepare your proposal and ta
 * * *
 
 *   [Documentation generator tool for the Teal language](#teal-doc)
-*   [A Windows installer for LuaRocks](#luarocks-windows)
 *   [Port Lua Test Suite to Lunatik](#lunatik-test)
 *   [Lunatik binding for Human Interface Devices (HID) drivers](#lunatik-hid)
 *   [Lunatik package for Linux distros](#lunatik-distro)
@@ -44,36 +43,6 @@ The goal of this project is to create a "tealdoc" tool that generates documentat
 #### Skill level
 
 *  Intermediate
-
-#### Project size
-
-*  Large (350 hours)
-
-#### Mentor
-
-*  [Hisham Muhammad](mailto:h@hisham.hm)  
-
-* * *
-
-### A Windows installer for LuaRocks
-
-[LuaRocks](https://luarocks.org) is the package manager for the Lua language. While the tool itself does have full Windows support, the installation process leaves much to be desired, due to the lack of standard package management systems on Windows. The goal of this project is to produce a native installer for LuaRocks on Windows using some FOSS GUI installer tool of your choice, that allows installing LuaRocks, Lua and configuring it with the user's compiler toolchain.
-
-#### Expected results
-
-*   a GUI installer for LuaRocks
-*   integration of the building of the GUI installer to the LuaRocks release scripts (ideally it should be possible to cross-compile the installer generation on Linux, and/or run it from a CI system)
-*   stretch goal: bundling the Mingw C compiler toolchain as an optional component of the installer
-
-#### Tools
-
-*   [LuaRocks](https://luarocks.org)
-*   a FOSS GUI installer toolkit, such as [WIX](https://wixtoolset.org) or [NSIS](https://nsis.sf.net)
-*   Microsoft Windows
-
-#### Skill level
-
-*  Easy/Intermediate
 
 #### Project size
 
