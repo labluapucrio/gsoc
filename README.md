@@ -157,23 +157,31 @@ The purpose of this project is to create Lunatik packages for some Linux distrib
 
 ### Terminal UI library for Lua
 
-Lua has several core libraries that work across platforms; luasocket (networking), luafilesystem (file system), and luasystem (time, random, terminal). The latter library, luasystem, provides the primitives to handle terminal operations, albeit they are fundamentally different on Posix and Windows based systems.
+Lua has several core libraries that work across platforms; luasocket (networking), luafilesystem (file system), and [luasystem](https://github.com/lunarmodules/luasystem) (time, random, terminal). The latter library, [luasystem](https://github.com/lunarmodules/luasystem), provides the primitives to handle terminal operations, albeit they are fundamentally different on Posix and Windows based systems.
 
-The purpose of this project is to create a new library that builds on luasystems terminal primitives to build basic UI elements for user interaction in a cross-platform way. This should not be anything like curses, but the simple user interactions like;
+The purpose of this project is to create a new library that builds on [luasystems terminal primitives](https://lunarmodules.github.io/luasystem/topics/03-terminal.md.html) to build basic UI elements for user interaction in a cross-platform way. This should not be anything like curses, but the simpler user interactions like;
 
-- headers and footers
 - progress indicators/bars
 - prompts; yes/no, ok/cancel
 - reading line inputs; reading a filename or other strings
 - hidden inputs; for secrets
+- headers and footers (basics for full-screen apps)
 - etc.
+
+### Things to consider
+
+The library should be general purpose, adhering the the Lua principle of 'mechanisms over policies'. This means for example that it should be possible to use it sync as well as async (coroutines), and it shouldn't force control over the main application loop, etc. A developer using the library should be able to make his/her own choice.
+
+Besides that terminals are challenging to work with. There are many control codes to control the terminal, however querying the terminal is very limited. There is no way to request current color status or cursor visibility for example.
 
 #### Expected results
 
-*   a new library build on top of LuaSystem
-*   Windows and Posix
+*   API that makes it easy to work around terminal limitations
 *   API design with consistency across platforms
+*   a new library build on top of LuaSystem
+*   works on Windows and Posix
 *   Documentation and examples
+*   *[stretch goal]* More full screen app support (panels, drawing/re-drawing)
 
 #### Prerequisites
 
@@ -186,7 +194,7 @@ The purpose of this project is to create a new library that builds on luasystems
 
 #### Project size
 
-*  Small (90 hours)
+*  Small (150 hours)
 
 #### Mentors
 
