@@ -166,6 +166,7 @@ The purpose of this project is to create a new library that builds on [luasystem
 - reading line inputs; reading a filename or other strings
 - hidden inputs; for secrets
 - headers and footers (basics for full-screen apps)
+- More complex full screen app support (panels, drawing/re-drawing)
 - etc.
 
 ### Things to consider
@@ -181,7 +182,6 @@ Besides that terminals are challenging to work with. There are many control code
 *   a new library build on top of LuaSystem
 *   works on Windows and Posix
 *   Documentation and examples
-*   *[stretch goal]* More full screen app support (panels, drawing/re-drawing)
 
 #### Prerequisites
 
@@ -194,7 +194,7 @@ Besides that terminals are challenging to work with. There are many control code
 
 #### Project size
 
-*  Small (150 hours)
+*  Medium (175 hours)
 
 #### Mentors
 
