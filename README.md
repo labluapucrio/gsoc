@@ -282,7 +282,7 @@ This project proposes the addition of a minimal API that would allow each driver
 
 ### Lunatik Binding for Linux Traffic Control (TC) and eBPF Maps
 
-This project aims to create a **Lunatik binding for the Linux Traffic Control (TC) subsystem and eBPF maps** to enable efficient and programmable network traffic control. These bindings will allow **Lua scripts** to manipulate TC and interact with **eBPF maps**, providing a flexible interface for traffic shaping, filtering, and monitoring.  
+This project aims to create **Lunatik bindings for the Linux Traffic Control (TC) subsystem and eBPF maps** to enable efficient and programmable network traffic control. These bindings will allow **Lua scripts** to manipulate TC and interact with **eBPF maps**, providing a flexible interface for traffic shaping, filtering, and monitoring.  
 
 This work is **heavily inspired by** the [luaxdp](https://github.com/luainkernel/lunatik?tab=readme-ov-file#xdp) binding, which integrates Lua with **XDP (eXpress Data Path)** using eBPF. Given that **TC and XDP both utilize eBPF**, this new binding (*luatc*) will **reuse and adapt parts of the luaxdp codebase**, ensuring consistency and maintainability.
 
