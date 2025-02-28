@@ -20,6 +20,7 @@ Please use our [application template](/apply.md) to prepare your proposal and ta
 *   [Terminal UI library for Lua](#terminal-ui-library-for-lua)
 *   [Conntrack and NAT support for Lunatik](#conntrack-and-nat-support-for-lunatik)
 *   [Prepared Statements for LuaSQL](#luasql-prepared-statemets)
+*   [Lunatik Binding for Linux Traffic Control (TC) and eBPF Maps](#lunatik-binding-for-linux-traffic-control-tc-and-ebpf-maps)
 
 * * *
 
@@ -278,3 +279,45 @@ This project proposes the addition of a minimal API that would allow each driver
 *  [Tomás Guisasola](mailto:tomasguisasola@gmail.com)
 
 * * *
+
+### Lunatik Binding for Linux Traffic Control (TC) and eBPF Maps
+
+This project aims to create a **Lunatik binding for the Linux Traffic Control (TC) subsystem and eBPF maps** to enable efficient and programmable network traffic control. These bindings will allow **Lua scripts** to manipulate TC and interact with **eBPF maps**, providing a flexible interface for traffic shaping, filtering, and monitoring.  
+
+This work is **heavily inspired by** the [luaxdp](https://github.com/luainkernel/lunatik?tab=readme-ov-file#xdp) binding, which integrates Lua with **XDP (eXpress Data Path)** using eBPF. Given that **TC and XDP both utilize eBPF**, this new binding (*luatc*) will **reuse and adapt parts of the luaxdp codebase**, ensuring consistency and maintainability.
+
+[Linux Traffic Control (TC)](https://man7.org/linux/man-pages/man8/tc.8.html) is a subsystem of the Linux kernel that allows administrators to **manage network packet transmission**, enabling features like **traffic shaping, queuing, scheduling, and policing**. It is widely used for **bandwidth control, Quality of Service (QoS), and network performance optimization**.
+
+Configuring TC using traditional tools can be **complex and static**, making it difficult to implement **custom traffic processing logic**. **Lunatik**, a Lua-based kernel scripting interface, can simplify this process by allowing users to write **Lua scripts** that dynamically interact with **TC queuing disciplines (qdiscs), classes, and filters**.
+
+Additionally, this project will introduce **support for eBPF maps** within Lunatik. [eBPF maps](https://docs.kernel.org/bpf/maps.html) are a key component of eBPF, providing **efficient storage and retrieval of structured data between user space and kernel space**. This functionality will **not be restricted to the TC binding (*luatc*)**, but will be implemented **as a general feature in Lunatik**, enabling **other kernel extensions** to leverage eBPF maps.
+
+#### Expected results
+
+* A fully functional **Lunatik binding for the TC subsystem**, allowing Lua scripts to configure and manipulate network traffic.
+* **Support for eBPF maps in Lunatik**, enabling efficient **data sharing between Lua scripts and eBPF programs**.
+* **Integration with the existing luaxdp codebase**, reusing and adapting components where possible.
+* **Clear documentation and examples**, demonstrating how to use *luatc* for **network traffic control** and **eBPF maps for data storage**.
+
+#### Prerequisites
+
+*   Lua and C programming languages
+*   Linux Networking
+*   Experience with Linux Kernel (highly desirable)
+*   Experience with Traffic Control (TC) subsystem (good to have)
+*   Experience with eBPF maps (good to have)
+
+#### Skill level
+
+*  Challenging
+
+#### Project size
+
+*  Large (350 hours)
+
+#### Mentors
+
+*  [Lourival Vieira Neto](mailto:lourival.neto@gmail.com)
+
+* * *
+
