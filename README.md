@@ -7,19 +7,19 @@ Ideas List - Google Summer of Code 2025
 
 In this page we introduce some of the projects that are are working with us this year under the LabLua umbrella and list some potential ideas for GSoC 2025 projects.
 
-If you are a contributor candidate, feel free to get in touch with us via our [mailing list](mailto:labluagsoc@googlegroups.com) or by sending an email to one of our mentors. You can apply using one of the ideas in the list or you can bring your own idea. Either way, don't leave it to the last minute =).
+If you are a contributor candidate, feel free to get in touch with us via our [Matrix](https://matrix.to/#/#lablua:matrix.org), [mailing list](mailto:labluagsoc@googlegroups.com) or by sending an email to one of our mentors. You can apply using one of the ideas in the list or you can bring your own idea. Either way, don't leave it to the last minute =).
 
 Please use our [application template](/apply.md) to prepare your proposal and take a look at our [successful projects](http://www.lua.inf.puc-rio.br/gsoc/blog2024.html) from last year.
 
 * * *
 
-*   [Documentation generator tool for the Teal language](#teal-doc)
-*   [Port Lua Test Suite to Lunatik](#lunatik-test)
-*   [Lunatik binding for Human Interface Devices (HID) drivers](#lunatik-hid)
-*   [Lunatik package for Linux distros](#lunatik-distro)
+*   [Documentation generator tool for the Teal language](#documentation-generator-tool-for-the-teal-language)
+*   [Port Lua Test Suite to Lunatik](#port-lua-test-suite-to-lunatik)
+*   [Lunatik binding for Human Interface Devices (HID) drivers](#lunatik-binding-for-human-interface-devices-hid-drivers)
+*   [Lunatik package for Linux distros](#lunatik-package-for-linux-distros)
 *   [Terminal UI library for Lua](#terminal-ui-library-for-lua)
 *   [Conntrack and NAT support for Lunatik](#conntrack-and-nat-support-for-lunatik)
-*   [Prepared Statements for LuaSQL](#luasql-prepared-statemets)
+*   [Prepared Statements for LuaSQL](#add-support-for-prepared-statements-for-luasql)
 *   [Lunatik Binding for Linux Traffic Control (TC) and eBPF Maps](#lunatik-binding-for-linux-traffic-control-tc-and-ebpf-maps)
 
 * * *
@@ -241,7 +241,8 @@ This projects builds upon the GSoC 2024 Project ['Lunatik binding for Netfilter'
 
 #### Mentors
 
-*  [Lourival Vieira Neto](mailto:lourival.neto@gmail.com) and [Mohammad Shehar Yaar Tausif](mailto:sheharyaar48@gmail.com)
+*  [Lourival Vieira Neto](mailto:lourival.neto@gmail.com)
+*  [Mohammad Shehar Yaar Tausif](mailto:sheharyaar48@gmail.com)
 
 * * *
 
@@ -318,6 +319,7 @@ Additionally, this project will introduce **support for eBPF maps** within Lunat
 #### Mentors
 
 *  [Lourival Vieira Neto](mailto:lourival.neto@gmail.com)
+*  [Savio Sena](mailto:savio.sena@gmail.com)
 
 * * *
 
