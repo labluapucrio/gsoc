@@ -59,13 +59,13 @@ The goal of this project is to create a "tealdoc" tool that generates documentat
 
 [Lunatik](https://github.com/luainkernel/lunatik/) is a framework for scripting the Linux kernel with Lua. For example, Lunatik can be used for scripting the Linux networking subsystem (as presented at Netdev [0x14](https://netdevconf.info/0x14/session.html?talk-linux-network-scripting-with-lua) and [0x17](https://netdevconf.info/0x17/sessions/talk/scripting-the-linux-routing-table-with-lua.html)) among other [examples](https://github.com/luainkernel/lunatik#examples).
 
-The purpose of this project is to create a Lunatik library for binding the [Linux HID APIs](https://docs.kernel.org/hid/index.html) to allow developers to write new HID drivers using Lua. This project might leverage the [Lunatik device library](https://github.com/luainkernel/lunatik#device), which allows the creation of character device drivers using Lua. Moreover, this project should also port the [Nvidia Shield HID driver](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/drivers/hid/hid-nvidia-shield.c) to Lua.
+The purpose of this project is to create a Lunatik library for binding the [Linux HID APIs](https://docs.kernel.org/hid/index.html) to allow developers to write new HID drivers using Lua. This project might leverage the [Lunatik device library](https://github.com/luainkernel/lunatik#device), which allows the creation of character device drivers using Lua. Moreover, this project should also port at least one HID driver to Lua.
 
 #### Expected results
 
 *   Lunatik HID library
-*   Nvidia Shield HID driver in Lua
-*   Benchmark comparison between Nvidia Shield HID driver and its Lua implementation
+*   HID driver examples in Lua
+*   Benchmark comparison between the original HID drivers and their Lua implementation
 
 #### Prerequisites
 
@@ -75,15 +75,19 @@ The purpose of this project is to create a Lunatik library for binding the [Linu
 
 #### Skill level
 
-*  Challenging
+*  Intermediate
 
 #### Project size
 
-*  Large (350 hours)
+*  Medium (175 hours) or Large (350 hours)
 
 #### Mentors
 
-*  [Lourival Vieira Neto](mailto:lourival.neto@gmail.com)  
+*  [Lourival Vieira Neto](mailto:lourival.neto@gmail.com)
+
+#### Matrix room
+
+* [#lunatik](https://matrix.to/#/#lunatik:matrix.org)
 
 * * *
 
@@ -118,7 +122,11 @@ The main difference between the kernel Lua and regular user-level Lua is that ke
 #### Mentors
 
 *  [Guilherme Salazar](mailto:gsz@acm.org)
-*  [Lourival Vieira Neto](mailto:lourival.neto@gmail.com)  
+*  [Lourival Vieira Neto](mailto:lourival.neto@gmail.com)
+
+#### Matrix room
+
+* [#lunatik](https://matrix.to/#/#lunatik:matrix.org)
 
 * * *
 
@@ -152,7 +160,11 @@ The purpose of this project is to create Lunatik packages for some Linux distrib
 #### Mentors
 
 *  [Marcel Moura](mailto:marcel.stanley@gmail.com)
-*  [Lourival Vieira Neto](mailto:lourival.neto@gmail.com)  
+*  [Lourival Vieira Neto](mailto:lourival.neto@gmail.com)
+
+#### Matrix room
+
+* [#lunatik](https://matrix.to/#/#lunatik:matrix.org)
 
 * * *
 
@@ -201,6 +213,10 @@ Besides that terminals are challenging to work with. There are many control code
 
 *  [Thijs Schreijer](mailto:thijs@thijsschreijer.nl)
 
+#### Matrix room
+
+* [#lunarmodules](https://matrix.to/#/#lunarmodules:matrix.org)
+
 * * *
 
 ### Conntrack and NAT support for Lunatik
@@ -244,6 +260,10 @@ This projects builds upon the GSoC 2024 Project ['Lunatik binding for Netfilter'
 *  [Lourival Vieira Neto](mailto:lourival.neto@gmail.com)
 *  [Mohammad Shehar Yaar Tausif](mailto:sheharyaar48@gmail.com)
 
+#### Matrix room
+
+* [#lunatik](https://matrix.to/#/#lunatik:matrix.org)
+
 * * *
 
 ### Add support for prepared statements for LuaSQL
@@ -278,6 +298,10 @@ This project proposes the addition of a minimal API that would allow each driver
 #### Mentors
 
 *  [Tomás Guisasola](mailto:tomasguisasola@gmail.com)
+
+#### Matrix room
+
+* [#lunarmodules](https://matrix.to/#/#lunarmodules:matrix.org)
 
 * * *
 
@@ -320,6 +344,10 @@ Additionally, this project will introduce **support for eBPF maps** within Lunat
 
 *  [Lourival Vieira Neto](mailto:lourival.neto@gmail.com)
 *  [Savio Sena](mailto:savio.sena@gmail.com)
+
+#### Matrix room
+
+* [#lunatik](https://matrix.to/#/#lunatik:matrix.org)
 
 * * *
 
