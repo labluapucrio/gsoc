@@ -172,7 +172,7 @@ The purpose of this project is to create Lunatik packages for some Linux distrib
 
 Lua has several core libraries that work across platforms; luasocket (networking), luafilesystem (file system), and [luasystem](https://github.com/lunarmodules/luasystem) (time, random, terminal). The latter library, [luasystem](https://github.com/lunarmodules/luasystem), provides the primitives to handle terminal operations, albeit they are fundamentally different on Posix and Windows based systems.
 
-The purpose of this project is to create a new library that builds on [luasystems terminal primitives](https://lunarmodules.github.io/luasystem/topics/03-terminal.md.html) to build basic UI elements for user interaction in a cross-platform way. This should not be anything like curses, but the simpler user interactions like;
+The purpose of this project is to shape the new [`terminal.lua` library](https://github.com/lunarmodules/terminal.lua) that builds on [luasystems terminal primitives](https://lunarmodules.github.io/luasystem/topics/03-terminal.md.html) to build basic UI elements for user interaction in a cross-platform way. This should not be anything like curses, but the simpler user interactions like;
 
 - progress indicators/bars
 - prompts; yes/no, ok/cancel
@@ -188,13 +188,21 @@ The library should be general purpose, adhering the the Lua principle of 'mechan
 
 Besides that terminals are challenging to work with. There are many control codes to control the terminal, however querying the terminal is very limited. There is no way to request current color status or cursor visibility for example.
 
+### Some explorations to get started:
+
+- what are terminals to begin with? a great explanation [part 1](https://blog.nelhage.com/2009/12/a-brief-introduction-to-termios/), and [part 2](https://blog.nelhage.com/2009/12/a-brief-introduction-to-termios-termios3-and-stty/)
+- read up on terminals and streams; `stdin`, `stdout`, and `stder`; especially the latter two, when to use what?
+- what does LuaSystem offer for platform compatibility, see [LuaSystem terminal docs](https://lunarmodules.github.io/luasystem/topics/03-terminal.md.html)
+- check the [existing code base](https://github.com/lunarmodules/terminal.lua)
+
+
 #### Expected results
 
 *   API that makes it easy to work around terminal limitations
 *   API design with consistency across platforms
-*   a new library build on top of LuaSystem
+*   updated `terminal.lua` build on top of LuaSystem, ready for a first release
 *   works on Windows and Posix
-*   Documentation and examples
+*   including tests, documentation and examples
 
 #### Prerequisites
 
