@@ -13,7 +13,7 @@ Please use our [application template](/apply.md) to prepare your proposal and ta
 
 | :exclamation:  Important note on AI usage |
 |:---------------------------|
-| GSoC is about learning and growing your personal skills. Using AI to code for you will not help you reach that goal. If you are eager to learn, then don't use AI to write your code. AI is improving quickly and provides great opportunities and research and learning, but you should write your own code. <br/><br/>As mentors we're here to mentor you, not your bot. |
+| GSoC is about learning and growing your personal skills. Using AI to code for you will not help you reach that goal. If you are eager to learn, then don't use AI to write your code. AI is improving quickly and provides great opportunities for research and learning, but you should write your own code. <br/><br/>As mentors we're here to mentor you, not your bot. |
 
 * * *
 
