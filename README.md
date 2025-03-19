@@ -11,6 +11,10 @@ If you are a contributor candidate, feel free to get in touch with us via our [M
 
 Please use our [application template](/apply.md) to prepare your proposal and take a look at our [successful projects](http://www.lua.inf.puc-rio.br/gsoc/blog2024.html) from last year.
 
+| :exclamation:  Important note on AI usage |
+|:---------------------------|
+| GSoC is about learning and growing your personal skills. Using AI to code for you will not help you reach that goal. If you are eager to learn, then don't use AI to write your code. AI is improving quickly and provides great opportunities and research and learning, but you should write your own code. <br/><br/>As mentors we're here to mentor you, not your bot. |
+
 * * *
 
 *   [Documentation generator tool for the Teal language](#documentation-generator-tool-for-the-teal-language)
