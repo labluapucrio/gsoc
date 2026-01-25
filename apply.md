@@ -2,7 +2,7 @@
 
 ![](http://www.lua.inf.puc-rio.br/images/site_header.png)
 
-Contributor Application - GSoC 2025
+Contributor Application - GSoC 2026
 -----------------------------------
 
 Please use the template below to help prepare your GSoC project proposal. We highly recommend discussing the project with your mentor before you submit the application to Google.
@@ -11,7 +11,7 @@ The following links contain helpful information about GSOC:
 
 *   [GSoC Help Page and FAQ](https://developers.google.com/open-source/gsoc/resources)
 *   [GSoC Contributor Guide](https://google.github.io/gsocguides/student/)
-*   [GSoC Deadlines for 2025](https://developers.google.com/open-source/gsoc/timeline)
+*   [GSoC Deadlines for 2026](https://developers.google.com/open-source/gsoc/timeline)
 
 Application Template
 --------------------

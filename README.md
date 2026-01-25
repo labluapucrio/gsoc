@@ -2,14 +2,14 @@
 
 ![](http://www.lua.inf.puc-rio.br/images/site_header.png)
 
-Ideas List - Google Summer of Code 2025
+Ideas List - Google Summer of Code 2026
 ---------------------------------------
 
-In this page we introduce some of the projects that are are working with us this year under the LabLua umbrella and list some potential ideas for GSoC 2025 projects.
+In this page we introduce some of the projects that are are working with us this year under the LabLua umbrella and list some potential ideas for GSoC 2026 projects.
 
 If you are a contributor candidate, feel free to get in touch with us via our [Matrix](https://matrix.to/#/#lablua:matrix.org), [mailing list](mailto:labluagsoc@googlegroups.com) or by sending an email to one of our mentors. You can apply using one of the ideas in the list or you can bring your own idea. Either way, don't leave it to the last minute =).
 
-Please use our [application template](/apply.md) to prepare your proposal and take a look at our [successful projects](http://www.lua.inf.puc-rio.br/gsoc/blog2024.html) from last year.
+Please use our [application template](/apply.md) to prepare your proposal and take a look at our [successful projects](http://www.lua.inf.puc-rio.br/gsoc/blog2025.html) from last year.
 
 | :exclamation:  Important note on AI usage |
 |:---------------------------|
@@ -17,81 +17,11 @@ Please use our [application template](/apply.md) to prepare your proposal and ta
 
 * * *
 
-*   [Documentation generator tool for the Teal language](#documentation-generator-tool-for-the-teal-language)
 *   [Port Lua Test Suite to Lunatik](#port-lua-test-suite-to-lunatik)
-*   [Lunatik binding for Human Interface Devices (HID) drivers](#lunatik-binding-for-human-interface-devices-hid-drivers)
-*   [Lunatik package for Linux distros](#lunatik-package-for-linux-distros)
 *   [Terminal UI library for Lua](#terminal-ui-library-for-lua)
 *   [Conntrack and NAT support for Lunatik](#conntrack-and-nat-support-for-lunatik)
 *   [Prepared Statements for LuaSQL](#add-support-for-prepared-statements-for-luasql)
 *   [Lunatik Binding for Linux Traffic Control (TC) and eBPF Maps](#lunatik-binding-for-linux-traffic-control-tc-and-ebpf-maps)
-
-* * *
-
-### Documentation generator tool for the Teal language
-
-The goal of this project is to create a "tealdoc" tool that generates documentation from comments embedded in [Teal](https://teal-language.org) source code. Teal is a statically typed language that compiles to Lua (Teal is to Lua somewhat like TypeScript is to JavaScript). Since Teal is essentially a superset of Lua, this tool should be useful for Lua as well. There is prior art for Lua (LuaDoc, LDoc), but the community would benefit from a Teal-specific tool that is able to make use of its type annotations as possibly integrate better with language servers in modern editors.
-
-#### Expected results
-
-*   a CLI tool that generates Markdown from Teal or Lua comments and Teal type annotations
-*   support for generating HTML, possibly using templating systems (possibly reusing LDoc code)
-*   stretch goal: integration with other existing tooling such as the vscode-teal plugin and LuaRocks
-*   stretch goal: extensibility for supporting more languages in the Lua ecosystem
-
-#### Tools
-
-*   [Teal](https://teal-language.org)
-*   any Lua libraries needed
-*   [LuaRocks](https://luarocks.org)
-
-#### Skill level
-
-*  Intermediate
-
-#### Project size
-
-*  Large (350 hours)
-
-#### Mentor
-
-*  [Hisham Muhammad](mailto:h@hisham.hm)  
-
-* * *
-
-### Lunatik binding for Human Interface Devices (HID) drivers
-
-[Lunatik](https://github.com/luainkernel/lunatik/) is a framework for scripting the Linux kernel with Lua. For example, Lunatik can be used for scripting the Linux networking subsystem (as presented at Netdev [0x14](https://netdevconf.info/0x14/session.html?talk-linux-network-scripting-with-lua) and [0x17](https://netdevconf.info/0x17/sessions/talk/scripting-the-linux-routing-table-with-lua.html)) among other [examples](https://github.com/luainkernel/lunatik#examples).
-
-The purpose of this project is to create a Lunatik library for binding the [Linux HID APIs](https://docs.kernel.org/hid/index.html) to allow developers to write new HID drivers using Lua. This project might leverage the [Lunatik device library](https://github.com/luainkernel/lunatik#device), which allows the creation of character device drivers using Lua. Moreover, this project should also port at least one HID driver to Lua.
-
-#### Expected results
-
-*   Lunatik HID library
-*   HID driver examples in Lua
-*   Benchmark comparison between the original HID drivers and their Lua implementation
-
-#### Prerequisites
-
-*   Lua and C programming languages
-*   Experience with the Lua-C API (highly desirable)
-*   Experience with Linux kernel (highly desirable)
-
-#### Skill level
-
-*  Intermediate
-
-#### Project size
-
-*  Medium (175 hours) or Large (350 hours)
-
-#### Mentors
-
-*  [Lourival Vieira Neto](mailto:lourival.neto@gmail.com)
-
-#### Matrix room
-
-* [#lunatik](https://matrix.to/#/#lunatik:matrix.org)
 
 * * *
 
@@ -126,44 +56,6 @@ The main difference between the kernel Lua and regular user-level Lua is that ke
 #### Mentors
 
 *  [Guilherme Salazar](mailto:gsz@acm.org)
-*  [Lourival Vieira Neto](mailto:lourival.neto@gmail.com)
-
-#### Matrix room
-
-* [#lunatik](https://matrix.to/#/#lunatik:matrix.org)
-
-* * *
-
-### Lunatik package for Linux distros
-
-[Lunatik](https://github.com/luainkernel/lunatik/) is a framework for scripting the Linux kernel with Lua. For example, Lunatik can be used for scripting the Linux networking subsystem (as presented at Netdev [0x14](https://netdevconf.info/0x14/session.html?talk-linux-network-scripting-with-lua) and [0x17](https://netdevconf.info/0x17/sessions/talk/scripting-the-linux-routing-table-with-lua.html)) among other [examples](https://github.com/luainkernel/lunatik#examples).
-
-The purpose of this project is to create Lunatik packages for some Linux distributions including, at least, Ubuntu, OpenWRT and VyOS. This project should also provide the documentation and templates for creating packages for new Lunatik libraries.
-
-#### Expected results
-
-*   Lunatik packages for Linux distros (at least, Ubuntu, OpenWRT, VyOS)
-*   Submit packages to upstream repositories
-*   Documentation and templates
-
-#### Prerequisites
-
-*   Lua and C programming languages
-*   Experience with build tools and package managers (highly desirable)
-*   Experience with the Lua-C API (nice to have)
-*   Experience with Linux kernel (nice to have)
-
-#### Skill level
-
-*  Intermediate
-
-#### Project size
-
-*  Small (90 hours)
-
-#### Mentors
-
-*  [Marcel Moura](mailto:marcel.stanley@gmail.com)
 *  [Lourival Vieira Neto](mailto:lourival.neto@gmail.com)
 
 #### Matrix room
