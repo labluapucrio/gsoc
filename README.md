@@ -17,11 +17,64 @@ Please use our [application template](/apply.md) to prepare your proposal and ta
 
 * * *
 
+*   [Add Video Support to pico-sdl and pico-lua](#add-video-support-to-pico-sdl-and-pico-lua)
 *   [Port Lua Test Suite to Lunatik](#port-lua-test-suite-to-lunatik)
 *   [Terminal UI library for Lua](#terminal-ui-library-for-lua)
 *   [Conntrack and NAT support for Lunatik](#conntrack-and-nat-support-for-lunatik)
 *   [Prepared Statements for LuaSQL](#add-support-for-prepared-statements-for-luasql)
 *   [Lunatik Binding for Linux Traffic Control (TC) and eBPF Maps](#lunatik-binding-for-linux-traffic-control-tc-and-ebpf-maps)
+
+* * *
+
+### Add Video Support to pico-sdl and pico-lua
+
+[pico-sdl][pico-sdl] is a simple educational 2D graphics library for C.
+
+[pico-lua][pico-lua] is the Lua binding for `pico-sdl`, enabling rapid
+prototyping and scripting of interactive applications.
+
+[pico-sdl]: https://github.com/fsantanna/pico-sdl/
+[pico-lua]: https://github.com/fsantanna/pico-sdl/tree/main/lua/
+
+This project aims to extend `pico-sdl` and `pico-lua` to support synchronized
+audio/video playback.
+The project should support, at least, raw formats, such as YUV video and PCM
+audio.
+
+More specifically, this project proposes a `pico.video` and `pico.audio`
+sub-modules to manipulate media files and play them following SDL2's streaming
+texture and audio queue APIs.
+
+Audio/video synchronization should follow time-based frame scheduling, in which
+the expected frame number is calculated from a delta elapsed time to properly
+construct a timeline.
+
+#### Expected results
+
+*   C implementation of audio/video sub-modules for `pico-sdl`
+*   Lua bindings for the audio/video module for `pico-lua`
+*   Synchronized A/V playback demo application
+*   Documentation and API reference
+*   Optional: FFmpeg integration for MP4/compressed formats
+
+#### Prerequisites
+
+*   Lua and C programming languages
+*   Experience with the Lua-C API
+*   SDL multimedia API (nice to have)
+*   Experience with video formats and codecs (nice to have)
+
+#### Skill level
+
+*   Intermediate
+
+#### Project size
+
+*   Small-Medium (90-175 hours)
+
+#### Mentors
+
+*   [Francisco Sant'Anna](mailto:francisco.santanna@gmail.com)
 
 * * *
 
