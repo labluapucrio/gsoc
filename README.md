@@ -24,6 +24,7 @@ Please use our [application template](/apply.md) to prepare your proposal and ta
 *   [Prepared Statements for LuaSQL](#add-support-for-prepared-statements-for-luasql)
 *   [Lunatik Binding for Linux Traffic Control (TC) and eBPF Maps](#lunatik-binding-for-linux-traffic-control-tc-and-ebpf-maps)
 *   [Bring the libcurl Lua Binding Up to Date and Make it More Lua Friendly](#bring-the-libcurl-lua-binding-up-to-date-and-make-it-More-lua-friendly)
+*   [Extend the Server Side Only Lua Websocket Module with a Websocket Client](#extend-the-server-side-only-lua-websocket-module-with-a-websocket-client)
 
 * * *
 
@@ -317,7 +318,7 @@ library to handle all kind of network requests.
 A Lua binding for libcurl exists ['LuaCURL'](https://github.com/arcapos/luacurl)
 but it has not seen much development activity recently.
 
-The goal of this project ist to bring the libcurl Lua binding up to the current
+The goal of this project is to bring the libcurl Lua binding up to the current
 state of libcurl and provide all (or at least most) of libcurls functionality
 to Lua.  At the same time LuaCURL should be made more Lua friendly (instead of
 just providing libcurls functions to Lua.) E.g. LuaCURL currently uses integer
@@ -338,6 +339,45 @@ of using strings for options.  So this should be reworked to use strings.
 *   Be proficient in the C programming language
 *   Experience with the Lua C API
 *   Experience with cURL and networking in general
+*   Experience with Lua
+
+#### Skill level
+
+*  Medium to advanced
+
+#### Project size
+
+*  Medium (175 hours) or Large (350 hours)
+
+#### Mentors
+
+*  [Marc Balmer](mailto:mhbalmer@gmail.com)
+*  [Thijs Schreijer](thijs@thijsschreijer.nl)
+
+***
+
+### Extend the Server Side Only Lua Websocket Module with a Websocket Client
+
+Websockets are a common way for clients, e.g. a webbrowser, to communicate
+with server applications over a persistent connection, the Websocket.
+
+With ['luawebsocket'](https://github.com/arcapos/luawebsocket) a server side
+only implementation of Websockets exists for Lua, i.e. it allows to write
+Websocket Servers in Lua.
+
+The goal of this project is to add client functionality to the luawebsocket
+module so that Lua programs can be first class Websocket clients.
+
+#### Expected results
+
+*   Add a client side Websocket implementation to luawebsocket
+*   Test and document everything
+
+#### Prerequisites
+
+*   Be proficient in the C programming language
+*   Experience with the Lua C API
+*   Experience with Websockets and networking in general
 *   Experience with Lua
 
 #### Skill level
