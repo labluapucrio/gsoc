@@ -25,6 +25,7 @@ Please use our [application template](/apply.md) to prepare your proposal and ta
 *   [Lunatik Binding for Linux Traffic Control (TC) and eBPF Maps](#lunatik-binding-for-linux-traffic-control-tc-and-ebpf-maps)
 *   [Bring the libcurl Lua Binding Up to Date and Make it More Lua Friendly](#bring-the-libcurl-lua-binding-up-to-date-and-make-it-More-lua-friendly)
 *   [Extend the Server Side Only Lua Websocket Module with a Websocket Client](#extend-the-server-side-only-lua-websocket-module-with-a-websocket-client)
+*   [Update the LuaPGSQL Module to PostgreSQL 18](#update-the-luapgsql-module-to-postgresql-18)
 
 * * *
 
@@ -378,6 +379,55 @@ module so that Lua programs can be first class Websocket clients.
 *   Be proficient in the C programming language
 *   Experience with the Lua C API
 *   Experience with Websockets and networking in general
+*   Experience with Lua
+
+#### Skill level
+
+*  Medium to advanced
+
+#### Project size
+
+*  Medium (175 hours) or Large (350 hours)
+
+#### Mentors
+
+*  [Marc Balmer](mailto:mhbalmer@gmail.com)
+*  [Thijs Schreijer](thijs@thijsschreijer.nl)
+
+***
+
+### Update the LuaPGSQL Module to PostgreSQL 18
+
+PostgreSQL is the most advanced open source database system and it is in very
+wide use.
+
+With ['luapgsql'](https://github.com/arcapos/luapgsql) a Lua client interface
+exists that is based on PostgreSQLs libpq C client library.  It aims at being
+feature complete and support all functionality of PostgreSQL itself, that
+includes advanced features like asnychronous notifications etc. It has, however,
+not been updated since ca. PostgreSQL version 16.
+
+The goal of this project is to bring the Lua PostgreSQL client module up to
+date with the current PostgreSQL 18 version while at the same make a critical
+review of the module and ensure its readyness to be used in a Lua environment
+and to add Lua idioms where needed.  On suche existing "Luaism" is e.g. that
+a PostgreSQL result set can be directly converted to a Lua table.
+
+A second goal is to write an extensive set of example programs in Lua to serve
+as a base and guide for developers that want to include PostgreSQL in their
+Lua programs.
+
+#### Expected results
+
+*   Review and extend where needed the Lua PostgreSQL client module
+*   Add a comprehensive set of example programs
+*   Test and document everything
+
+#### Prerequisites
+
+*   Be proficient in the C programming language
+*   Experience with the Lua C API
+*   Experience with PostgreSQL in general and libpq in special
 *   Experience with Lua
 
 #### Skill level
