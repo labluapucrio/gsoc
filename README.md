@@ -326,6 +326,11 @@ just providing libcurls functions to Lua.) E.g. LuaCURL currently uses integer
 constants taken from libcurl for LuaCURL options, but Lua has the paradigm
 of using strings for options.  So this should be reworked to use strings.
 
+### Some explorations to get started
+
+*   The ['libcurl'](https://curl.se/libcurl/) website
+*   ['The Lua Integration Guide'](https://lua.msys.ch) by Marc Balmer
+
 #### Expected results
 
 *   A LuaCURL module that is in par with libcurl
@@ -372,6 +377,11 @@ Websocket Servers in Lua.
 
 The goal of this project is to add client functionality to the luawebsocket
 module so that Lua programs can be first class Websocket clients.
+
+### Some explorations to get started
+
+*   [The Websocket Standard](https://websockets.spec.whatwg.org)
+*   ['The Lua Integration Guide'](https://lua.msys.ch) by Marc Balmer
 
 #### Expected results
 
@@ -424,6 +434,11 @@ a PostgreSQL result set can be directly converted to a Lua table.
 A second goal is to write an extensive set of example programs in Lua to serve
 as a base and guide for developers that want to include PostgreSQL in their
 Lua programs.
+
+### Some explorations to get started
+
+*   ['libpq - the C client interface'](https://www.postgresql.org/docs/current/libpq.html)
+*   ['The Lua Integration Guide'](https://lua.msys.ch) by Marc Balmer
 
 #### Expected results
 
