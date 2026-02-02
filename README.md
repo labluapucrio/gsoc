@@ -23,6 +23,7 @@ Please use our [application template](/apply.md) to prepare your proposal and ta
 *   [Conntrack and NAT support for Lunatik](#conntrack-and-nat-support-for-lunatik)
 *   [Prepared Statements for LuaSQL](#add-support-for-prepared-statements-for-luasql)
 *   [Lunatik Binding for Linux Traffic Control (TC) and eBPF Maps](#lunatik-binding-for-linux-traffic-control-tc-and-ebpf-maps)
+*   [Bring the libcurl Lua Binding Up to Date and Make it More Lua Friendly](#bring-the-libcurl-lua-binding-up-to-date-and-make-it-More-lua-friendly)
 
 * * *
 
@@ -308,7 +309,7 @@ Additionally, this project will introduce **support for eBPF maps** within Lunat
 
 * * *
 
-### Bring the libcurl Lua Binding Up to Date and Make More Lua friendly
+### Bring the libcurl Lua Binding Up to Date and Make it More Lua Friendly
 
 ['libcurl'](https://curl.se/libcurl/) is the de-facto standard network transfer
 library to handle all kind of network requests.
