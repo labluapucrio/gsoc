@@ -355,6 +355,10 @@ of using strings for options.  So this should be reworked to use strings.
 *  [Marc Balmer](mailto:mhbalmer@gmail.com)
 *  [Thijs Schreijer](thijs@thijsschreijer.nl)
 
+#### Matrix room
+
+* [#lua-integration](https://matrix.to/#/#lua-integration:matrix.org)
+
 ***
 
 ### Extend the Server Side Only Lua Websocket Module with a Websocket Client
@@ -393,6 +397,10 @@ module so that Lua programs can be first class Websocket clients.
 
 *  [Marc Balmer](mailto:mhbalmer@gmail.com)
 *  [Thijs Schreijer](thijs@thijsschreijer.nl)
+
+#### Matrix room
+
+* [#lua-integration](https://matrix.to/#/#lua-integration:matrix.org)
 
 ***
 
@@ -441,6 +449,10 @@ Lua programs.
 #### Mentors
 
 *  [Marc Balmer](mailto:mhbalmer@gmail.com)
-*  [Thijs Schreijer](thijs@thijsschreijer.nl)
+*  [Thijs
+
+#### Matrix room
+
+* [#lua-integration](https://matrix.to/#/#lua-integration:matrix.org)
 
 ***
