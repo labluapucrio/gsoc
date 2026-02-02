@@ -464,7 +464,7 @@ Lua programs.
 #### Mentors
 
 *  [Marc Balmer](mailto:mhbalmer@gmail.com)
-*  [Thijs
+*  [Thijs Schreijer](thijs@thijsschreijer.nl)
 
 #### Matrix room
 
