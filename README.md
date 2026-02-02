@@ -264,7 +264,7 @@ This project proposes the addition of a minimal API that would allow each driver
 
 ### Lunatik Binding for Linux Traffic Control (TC) and eBPF Maps
 
-This project aims to create **Lunatik bindings for the Linux Traffic Control (TC) subsystem and eBPF maps** to enable efficient and programmable network traffic control. These bindings will allow **Lua scripts** to manipulate TC and interact with **eBPF maps**, providing a flexible interface for traffic shaping, filtering, and monitoring.  
+This project aims to create **Lunatik bindings for the Linux Traffic Control (TC) subsystem and eBPF maps** to enable efficient and programmable network traffic control. These bindings will allow **Lua scripts** to manipulate TC and interact with **eBPF maps**, providing a flexible interface for traffic shaping, filtering, and monitoring.
 
 This work is **heavily inspired by** the [luaxdp](https://github.com/luainkernel/lunatik?tab=readme-ov-file#xdp) binding, which integrates Lua with **XDP (eXpress Data Path)** using eBPF. Given that **TC and XDP both utilize eBPF**, this new binding (*luatc*) will **reuse and adapt parts of the luaxdp codebase**, ensuring consistency and maintainability.
 
@@ -308,3 +308,48 @@ Additionally, this project will introduce **support for eBPF maps** within Lunat
 
 * * *
 
+### Bring the libcurl Lua Binding Up to Date and Make More Lua friendly
+
+['libcurl'](https://curl.se/libcurl/) is the de-facto standard network transfer
+library to handle all kind of network requests.
+
+A Lua binding for libcurl exists ['LuaCURL'](https://github.com/arcapos/luacurl)
+but it has not seen much development activity recently.
+
+The goal of this project ist to bring the libcurl Lua binding up to the current
+state of libcurl and provide all (or at least most) of libcurls functionality
+to Lua.  At the same time LuaCURL should be made more Lua friendly (instead of
+just providing libcurls functions to Lua.) E.g. LuaCURL currently uses integer
+constants taken from libcurl for LuaCURL options, but Lua has the paradigm
+of using strings for options.  So this should be reworked to use strings.
+
+#### Expected results
+
+*   A LuaCURL module that is in par with libcurl
+*   Make LuaCURL more "Lua-ish", e.g. no more integer constants
+*   Ensure that LuaCURL remains agnostic of the libcurl version it is compiled
+    against (i.e. check the libcurl version at runtime to only provide to Lua
+    what is available in the underlying libcurl)
+*   Test and document everything
+
+#### Prerequisites
+
+*   Be proficient in the C programming language
+*   Experience with the Lua C API
+*   Experience with cURL and networking in general
+*   Experience with Lua
+
+#### Skill level
+
+*  Medium to advanced
+
+#### Project size
+
+*  Medium (175 hours) or Large (350 hours)
+
+#### Mentors
+
+*  [Marc Balmer](mailto:mhbalmer@gmail.com)
+*  [Thijs Schreijer](thijs@thijsschreijer.nl)
+
+***
