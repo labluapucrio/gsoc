@@ -524,7 +524,7 @@ interface in their Lua programs.
 
 #### Project size
 
-*  Medium (150 hours) or Large (350 hours)
+*  Medium (175 hours) or Large (350 hours)
 
 #### Mentors
 
