@@ -27,6 +27,7 @@ Please use our [application template](/apply.md) to prepare your proposal and ta
 *   [Extend the Server Side Only Lua Websocket Module with a Websocket Client](#extend-the-server-side-only-lua-websocket-module-with-a-websocket-client)
 *   [Update the LuaPGSQL Module to PostgreSQL 18](#update-the-luapgsql-module-to-postgresql-18)
 *   [A Comprehensive Lua Module for Linux](#a-comprehensive-lua-module-for-linux)
+*   [Lunatik Binding for Netlink](#lunatik-binding-for-netlink)
 
 * * *
 
@@ -535,3 +536,52 @@ interface in their Lua programs.
 * [#lua-integration](https://matrix.to/#/#lua-integration:matrix.org)
 
 ***
+
+### Lunatik Binding for Netlink
+
+This project aims to implement a Netlink binding for Lunatik, allowing Lua
+scripts running in kernel space to interact with Netlink-based kernel
+subsystems and user space applications.
+
+The binding should support Generic Netlink, enabling bidirectional
+communication with user space, and expose kernel APIs that are only available
+via Netlink, such as the cfg80211 subsystem. It should also allow the
+extraction of data from Netfilter hooks through Netlink.
+
+As part of the project, luafib should be reimplemented entirely in Lua, using
+the new Netlink binding.
+
+#### Expected results
+
+* Netlink communication between kernel-space Lua and user space
+* Lua interfaces for Netlink-only kernel subsystems (e.g., cfg80211)
+* Support for extracting data from Netfilter via Netlink
+* A pure Lua reimplementation of luafib
+* Documentation and usage examples
+
+#### Prerequisites
+
+*   Lua and C programming languages
+*   Linux Networking
+*   Basic understanding of Netlink and Sockets
+*   Experience with Linux Kernel (highly desirable)
+
+#### Skill level
+
+*   Intermediate
+
+#### Project size
+
+*  Medium (175 hours) or Large (350 hours)
+
+#### Mentors
+
+*  [Lourival Vieira Neto](mailto:lourival.neto@gmail.com)
+*  [Mohammad Shehar Yaar Tausif](mailto:sheharyaar48@gmail.com)
+
+#### Matrix room
+
+* [#lunatik](https://matrix.to/#/#lunatik:matrix.org)
+
+***
+
