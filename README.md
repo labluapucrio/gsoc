@@ -26,6 +26,7 @@ Please use our [application template](/apply.md) to prepare your proposal and ta
 *   [Bring the libcurl Lua Binding Up to Date and Make it More Lua Friendly](#bring-the-libcurl-lua-binding-up-to-date-and-make-it-More-lua-friendly)
 *   [Extend the Server Side Only Lua Websocket Module with a Websocket Client](#extend-the-server-side-only-lua-websocket-module-with-a-websocket-client)
 *   [Update the LuaPGSQL Module to PostgreSQL 18](#update-the-luapgsql-module-to-postgresql-18)
+*   [A Comprehensive Lua Module for Linux](#a-comprehensive-lua-module-for-linux)
 
 * * *
 
@@ -460,6 +461,69 @@ Lua programs.
 #### Project size
 
 *  Medium (175 hours) or Large (350 hours)
+
+#### Mentors
+
+*  [Marc Balmer](mailto:mhbalmer@gmail.com)
+*  [Thijs Schreijer](thijs@thijsschreijer.nl)
+
+#### Matrix room
+
+* [#lua-integration](https://matrix.to/#/#lua-integration:matrix.org)
+
+***
+
+### A Comprehensive Lua Module for Linux
+
+Linux offers a rich programming interface for C programmers and we aim with
+this project to make this interface available to Lua.
+
+With ['lualinux'](https://github.com/arcapos/lualinux) a Lua module to use
+the Linux programming interface exists, but it is far from complete.  It
+already has a modular approach, so that Lua programs don't have to load a
+"monster" binding, but just so much as is needed.  Part of the project is
+to review this modularization.
+
+The module tries to mimick a bit what is done in C:  You include, e.g. syslog.h
+when you want to use the syslog() function in your C program.  Likewise in Lua
+you would require 'syslog' to use the syslog functionality.
+
+The goal of this project is to make as much as possible of the Linux programming
+interface available to Lua programs and try use Lua paradigms where possible.
+For example, while in C header files #defines for constants are used, in Lua
+we prefer strings for options.  In the end the module should provide the
+Linux programming interface in a Lua friendly style.
+
+A second goal is to write an extensive set of example programs in Lua to serve
+as a base and guide for developers that want to use the Linux programming
+interface in their Lua programs.
+
+### Some explorations to get started
+
+*   ['The Linux Programming Interface'](https://man7.org/tlpi/) by Michael
+    Kerrisk
+*   ['The Lua Integration Guide'](https://lua.msys.ch) by Marc Balmer
+
+#### Expected results
+
+*   Complete as much as possible the Linux module for Lua
+*   Add a comprehensive set of example programs
+*   Test and document everything
+
+#### Prerequisites
+
+*   Be proficient in the C programming language
+*   Experience with the Lua C API
+*   Experience with the Linux programming interface
+*   Experience with Lua
+
+#### Skill level
+
+*  Advanced
+
+#### Project size
+
+*  Medium (150 hours) or Large (350 hours)
 
 #### Mentors
 
