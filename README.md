@@ -27,7 +27,7 @@ Please use our [application template](/apply.md) to prepare your proposal and ta
 *   [Extend the Server Side Only Lua Websocket Module with a Websocket Client](#extend-the-server-side-only-lua-websocket-module-with-a-websocket-client)
 *   [Update the LuaPGSQL Module to PostgreSQL 18](#update-the-luapgsql-module-to-postgresql-18)
 *   [A Comprehensive Lua Module for Linux](#a-comprehensive-lua-module-for-linux)
-*   [Binding for ELF toolchain C library to manupulate ELF files](#elftoolchain-binding)
+*   [Binding for ELF toolchain C library to manipulate ELF files](#binding-for-elf-toolchain-c-library-to-manipulate-elf-files)
 
 * * *
 
@@ -537,7 +537,7 @@ interface in their Lua programs.
 
 ***
 
-### Binding for ELF Toolchain C Library to Manupulate ELF Files
+### Binding for ELF Toolchain C Library to Manipulate ELF Files
 
 
 ### Some explorations to get started
