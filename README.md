@@ -28,6 +28,7 @@ Please use our [application template](/apply.md) to prepare your proposal and ta
 *   [Update the LuaPGSQL Module to PostgreSQL 18](#update-the-luapgsql-module-to-postgresql-18)
 *   [A Comprehensive Lua Module for Linux](#a-comprehensive-lua-module-for-linux)
 *   [Lunatik Binding for Netlink](#lunatik-binding-for-netlink)
+*   [Lunatik Binding for OpenWrt UBUS](#lunatik-binding-for-openwrt-ubus)
 
 * * *
 
@@ -578,6 +579,56 @@ the new Netlink binding.
 
 *  [Lourival Vieira Neto](mailto:lourival.neto@gmail.com)
 *  [Mohammad Shehar Yaar Tausif](mailto:sheharyaar48@gmail.com)
+
+#### Matrix room
+
+* [#lunatik](https://matrix.to/#/#lunatik:matrix.org)
+
+***
+
+### Lunatik Binding for OpenWrt UBUS
+
+This project aims to implement a UBUS binding for Lunatik, allowing Lua scripts
+running in kernel space to interact directly with the OpenWrt configuration and
+management bus.
+
+UBUS is OpenWrt’s IPC mechanism, widely used for system configuration, status
+reporting, and service control. It is built on top of libubus and libubox, and
+uses UNIX Domain Sockets for communication between clients and services.
+
+With the recent addition of UNIX Domain Socket support in Lunatik, this project
+proposes creating a native Lunatik API for UBUS, enabling both read and write
+access to the bus directly from kernel-space Lua scripts. This would allow
+Lunatik-based logic to query system state, react to configuration changes, and
+interact with OpenWrt services in a structured and consistent way.
+
+#### Expected results
+
+* A Lua API exposing core UBUS functionality
+* Support for reading from and writing to the UBUS bus
+* Integration based on UNIX Domain Sockets
+* Example scripts demonstrating interaction with OpenWrt configuration and services
+* Documentation of the API
+
+#### Prerequisites
+
+*   Lua and C programming languages
+*   Familiarity with OpenWrt architecture
+*   Basic understanding of UBUS, libubus, and libubox
+
+#### Skill level
+
+*   Beginner
+
+#### Project size
+
+*  Medium (175 hours) or Large (350 hours)
+
+#### Mentors
+
+*  [Arif Alam](mailto:arif.alam@netexperience.com)
+*  [Marcel Moura](mailto:marcel.stanley@gmail.com)
+*  [Lourival Vieira Neto](mailto:lourival.neto@gmail.com)
 
 #### Matrix room
 
