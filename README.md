@@ -28,6 +28,7 @@ Please use our [application template](/apply.md) to prepare your proposal and ta
 *   [A Comprehensive Lua Module for Linux](#a-comprehensive-lua-module-for-linux)
 *   [Lunatik Binding for Netlink](#lunatik-binding-for-netlink)
 *   [Lunatik Binding for OpenWrt UBUS](#lunatik-binding-for-openwrt-ubus)
+*   [Lunatik Binding for sched-ext](#lunatik-binding-for-sched-ext)
 
 * * *
 
@@ -574,6 +575,64 @@ interact with OpenWrt services in a structured and consistent way.
 #### Matrix room
 
 * [#lunatik](https://matrix.to/#/#lunatik:matrix.org)
+
+***
+
+### Lunatik Binding for sched-ext
+
+Recently, sched-ext was added to the Linux kernel, introducing a framework that
+allows scheduler extensions implemented using eBPF. This mechanism enables
+custom scheduling policies to be developed and dynamically attached to the
+kernel scheduler, without modifying core scheduler code.
+
+sched-ext has already been used to implement experimental and unconventional
+schedulers, including a example of a scheduler based on astrology,
+highlighting both the flexibility of the framework and its suitability for
+rapid experimentation.
+
+This project aims to create a Lunatik integration API for sched-ext, following
+a design similar to luaxdp, enabling Lua callbacks to be invoked from sched-ext
+hooks in order to implement process scheduling policies. The project also
+includes exporting the required scheduler-related kernel APIs to Lua, allowing
+policies to be expressed clearly and concisely.
+
+The expected outcome is a new binding, luasched, along with example scheduling
+policies implemented in Lua, and a comparative evaluation against eBPF
+implementations in terms of performance and code clarity.
+
+#### Expected results
+
+*  A new Lunatik binding for sched-ext (luasched)
+*  A Lua API exposing sched-ext hooks and required scheduler primitives
+*  Support for implementing process scheduling policies using Lua callbacks
+*  Example scheduling policies implemented in Lua
+*  Benchmark comparisons between Lua-based sched-ext policies and eBPF equivalents
+*  Code clarity and maintainability comparisons between Lua and eBPF approaches
+*  Documentation and usage examples
+
+#### Prerequisites
+
+*  Lua and C programming languages
+*  Linux kernel internals
+*  Basic understanding of Linux scheduling
+*  Familiarity with eBPF and sched-ext is a plus
+
+#### Skill level
+
+*  Intermediate
+
+#### Project size
+
+*  Small (90 hours) or Medium (175 hours)
+
+#### Mentors
+
+*  [Lourival Vieira Neto](mailto:lourival.neto@gmail.com)
+*  [Mohammad Shehar Yaar Tausif](mailto:sheharyaar48@gmail.com)
+
+#### Matrix room
+
+*  [#lunatik](https://matrix.to/#/#lunatik:matrix.org)
 
 ***
 
