@@ -75,7 +75,7 @@ construct a timeline.
 
 #### Project size
 
-*   Small-Medium (90-175 hours)
+*   Small (90 hours) or Medium (175 hours)
 
 #### Mentors
 
@@ -105,11 +105,11 @@ The main difference between the kernel Lua and regular user-level Lua is that ke
 
 #### Skill level
 
-*  Intermediate
+*  Beginner
 
 #### Project size
 
-*  Medium (175 hours)
+*  Small (90 hours) or Medium (175 hours)
 
 #### Mentors
 
