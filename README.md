@@ -247,6 +247,7 @@ Additionally, this project will introduce **support for eBPF maps** within Lunat
 
 *  [Lourival Vieira Neto](mailto:lourival.neto@gmail.com)
 *  [Savio Sena](mailto:savio.sena@gmail.com)
+*  [Carlos Carvalho](carloslack@gmail.com)
 
 #### Matrix room
 
