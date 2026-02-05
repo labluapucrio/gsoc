@@ -83,7 +83,7 @@ construct a timeline.
 #### Prerequisites
 
 *   Lua and C programming languages
-*   Experience with the Lua-C API
+*   Experience with the Lua C API
 *   SDL multimedia API (nice to have)
 *   Experience with video formats and codecs (nice to have)
 
@@ -119,7 +119,7 @@ This project proposes the addition of a minimal API that would allow each driver
 
 *   C programming languages
 *   Experience with any database C API (highly desirable)
-*   Experience with Lua-C API (highly desirable)
+*   Experience with Lua C API (highly desirable)
 *   Experience with Lua (good to have)
 
 #### Skill level
@@ -429,7 +429,7 @@ The main difference between the kernel Lua and regular user-level Lua is that ke
 #### Prerequisites
 
 *   Lua and C programming languages
-*   Experience with the Lua-C API (nice to have)
+*   Experience with the Lua C API (nice to have)
 *   Experience with Linux kernel (nice to have)
 
 #### Skill level
