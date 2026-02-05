@@ -2,8 +2,8 @@
 
 ![](http://www.lua.inf.puc-rio.br/images/site_header.png)
 
-Ideas List - Google Summer of Code 2026
----------------------------------------
+Project Ideas List - Google Summer of Code 2026
+-----------------------------------------------
 
 In this page we introduce some of the projects that are are working with us this year under the LabLua umbrella and list some potential ideas for GSoC 2026 projects.
 
@@ -17,8 +17,6 @@ Please use our [application template](/apply.md) to prepare your proposal and ta
 
 * * *
 
-## Project Ideas
-
 ### General Lua Projects
 
 *   [Add Video Support to pico-sdl and pico-lua](#add-video-support-to-pico-sdl-and-pico-lua)
@@ -26,8 +24,8 @@ Please use our [application template](/apply.md) to prepare your proposal and ta
 
 ### Lua Integration
 
-Lua integrations means to integrate Lua into an existing program written in
-C/C++ to mak eit scriptable and/or to provide the functionality of software
+Lua integration means to integrate Lua into an existing program written in
+C/C++ to make it scriptable and/or to provide the functionality of software
 written in C/C++, typically libraries, to Lua programs.
 
 *   [Bring the libcurl Lua Binding Up to Date and Make it More Lua Friendly](#bring-the-libcurl-lua-binding-up-to-date-and-make-it-More-lua-friendly)
@@ -37,8 +35,8 @@ written in C/C++, typically libraries, to Lua programs.
 
 ### Lunatik
 
-Lunatik is a project that brings Lua to the Linux kernel to enable users
-to interact with the Linux kernel using the Lua scripting language.
+Lunatik is a project that brings Lua to the Linux kernel to make it possible
+to script the Linux kernel in Lua.
 
 *   [Conntrack and NAT support for Lunatik](#conntrack-and-nat-support-for-lunatik)
 *   [Port Lua Test Suite to Lunatik](#port-lua-test-suite-to-lunatik)
