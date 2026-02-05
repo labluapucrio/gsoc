@@ -39,7 +39,7 @@ Lunatik is a project that brings Lua to the Linux kernel to make it possible
 to script the Linux kernel in Lua.
 
 *   [Conntrack and NAT support for Lunatik](#conntrack-and-nat-support-for-lunatik)
-*   [Port Lua Test Suite to Lunatik](#port-lua-test-suite-to-lunatik)
+*   [Port The Lua Test Suite to Lunatik](#port-the-lua-test-suite-to-lunatik)
 *   [Lunatik Binding for Linux Traffic Control (TC) and eBPF Maps](#lunatik-binding-for-linux-traffic-control-tc-and-ebpf-maps)
 *   [Lunatik Binding for Netlink](#lunatik-binding-for-netlink)
 *   [Lunatik Binding for OpenWrt UBUS](#lunatik-binding-for-openwrt-ubus)
@@ -412,7 +412,7 @@ Additionally, this project will introduce **support for eBPF maps** within Lunat
 
 * * *
 
-### Port Lua Test Suite to Lunatik
+### Port The Lua Test Suite to Lunatik
 
 [Lunatik](https://github.com/luainkernel/lunatik/) is a framework for scripting the Linux kernel with Lua. For example, Lunatik can be used for scripting the Linux networking subsystem (as presented at Netdev [0x14](https://netdevconf.info/0x14/session.html?talk-linux-network-scripting-with-lua) and [0x17](https://netdevconf.info/0x17/sessions/talk/scripting-the-linux-routing-table-with-lua.html)) among other [examples](https://github.com/luainkernel/lunatik#examples).
 
