@@ -17,20 +17,39 @@ Please use our [application template](/apply.md) to prepare your proposal and ta
 
 * * *
 
+## Project Ideas
+
+### General Lua Projects
+
 *   [Add Video Support to pico-sdl and pico-lua](#add-video-support-to-pico-sdl-and-pico-lua)
-*   [Port Lua Test Suite to Lunatik](#port-lua-test-suite-to-lunatik)
-*   [Conntrack and NAT support for Lunatik](#conntrack-and-nat-support-for-lunatik)
 *   [Prepared Statements for LuaSQL](#add-support-for-prepared-statements-for-luasql)
-*   [Lunatik Binding for Linux Traffic Control (TC) and eBPF Maps](#lunatik-binding-for-linux-traffic-control-tc-and-ebpf-maps)
+
+### Lua Integration
+
+Lua integrations means to integrate Lua into an existing program written in
+C/C++ to mak eit scriptable and/or to provide the functionality of software
+written in C/C++, typically libraries, to Lua programs.
+
 *   [Bring the libcurl Lua Binding Up to Date and Make it More Lua Friendly](#bring-the-libcurl-lua-binding-up-to-date-and-make-it-More-lua-friendly)
 *   [Extend the Server Side Only Lua Websocket Module with a Websocket Client](#extend-the-server-side-only-lua-websocket-module-with-a-websocket-client)
 *   [Update the LuaPGSQL Module to PostgreSQL 18](#update-the-luapgsql-module-to-postgresql-18)
 *   [A Comprehensive Lua Module for Linux](#a-comprehensive-lua-module-for-linux)
+
+### Lunatik
+
+Lunatik is a project that brings Lua to the Linux kernel to enable users
+to interact with the Linux kernel using the Lua scripting language.
+
+*   [Conntrack and NAT support for Lunatik](#conntrack-and-nat-support-for-lunatik)
+*   [Port Lua Test Suite to Lunatik](#port-lua-test-suite-to-lunatik)
+*   [Lunatik Binding for Linux Traffic Control (TC) and eBPF Maps](#lunatik-binding-for-linux-traffic-control-tc-and-ebpf-maps)
 *   [Lunatik Binding for Netlink](#lunatik-binding-for-netlink)
 *   [Lunatik Binding for OpenWrt UBUS](#lunatik-binding-for-openwrt-ubus)
 *   [Lunatik Binding for sched-ext](#lunatik-binding-for-sched-ext)
 
 * * *
+
+## Detailed Description of Project Ideas
 
 ### Add Video Support to pico-sdl and pico-lua
 
@@ -84,92 +103,6 @@ construct a timeline.
 
 * * *
 
-### Port Lua Test Suite to Lunatik
-
-[Lunatik](https://github.com/luainkernel/lunatik/) is a framework for scripting the Linux kernel with Lua. For example, Lunatik can be used for scripting the Linux networking subsystem (as presented at Netdev [0x14](https://netdevconf.info/0x14/session.html?talk-linux-network-scripting-with-lua) and [0x17](https://netdevconf.info/0x17/sessions/talk/scripting-the-linux-routing-table-with-lua.html)) among other [examples](https://github.com/luainkernel/lunatik#examples).
-
-The purpose of this project is to port the [Lua Test Suite](https://www.lua.org/tests/) to Lunatik. That is, to adapt scripts from the Lua Test Suite and develop a Linux loadable kernel module containing its C portion. This project might leverage the [GSoC 2015 project](http://www.lua.inf.puc-rio.br/gsoc/blog2015.html#kerneltest) developed by [Guilherme Salazar](/cdn-cgi/l/email-protection#2a4d59506a4b49470445584d), which ported the Lua Test Suite to the [NetBSD kernel](https://man.netbsd.org/lua.4).
-
-The main difference between the kernel Lua and regular user-level Lua is that kernel Lua doesn't have support for standard libraries that depend on operating system (e.g., io and os) and for floating-point numbers.
-
-#### Expected results
-
-*   Adapted test scripts for Lunatik
-*   Lunatik library for testing the Lua C API
-*   Test Report at least for x86\_64 and ARM64
-
-#### Prerequisites
-
-*   Lua and C programming languages
-*   Experience with the Lua-C API (nice to have)
-*   Experience with Linux kernel (nice to have)
-
-#### Skill level
-
-*  Beginner
-
-#### Project size
-
-*  Small (90 hours) or Medium (175 hours)
-
-#### Mentors
-
-*  [Guilherme Salazar](mailto:gsz@acm.org)
-*  [Lourival Vieira Neto](mailto:lourival.neto@gmail.com)
-
-#### Matrix room
-
-* [#lunatik](https://matrix.to/#/#lunatik:matrix.org)
-
-* * *
-
-### Conntrack and NAT support for Lunatik
-
-Connection tracking (conntrack) is a fundamental component of the Linux kernel's networking stack. It is part of the Netfilter framework and is responsible for monitoring active network connections passing through the system. Conntrack maintains a state table, allowing the kernel to track packets as part of a flow and apply connection-oriented filtering, NAT (Network Address Translation), and stateful firewalling.
-
-NAT is used to modify IP addresses and ports in packet headers to facilitate address translation, load balancing, and security enforcement. The Linux kernel provides APIs to manipulate NAT and connection tracking through the Netfilter framework.
-
-The purpose of this project is to port conntrack and NAT data structures and kernel APIs to lunatik. These are present under:
-*   `net/netfilter/conntrack.h`
-*   `net/netfilter/nf_conntrack_common.h`
-*   `net/netfilter/conntrack_tuple.h`
-*   `net/netfilter/nf_conntrack_core.h`
-*   `net/netfilter/nf_nat.h`
-
-This projects builds upon the GSoC 2024 Project ['Lunatik binding for Netfilter'](https://summerofcode.withgoogle.com/archive/2024/projects/BIJAPZjf). For complete reference on the relevant kernel headers and data structures, refer to the following [gist](https://gist.github.com/sheharyaar/cbbd43037fa43fd391e52964347a2bc9).
-
-#### Expected results
-
-*   Allow fetching the conntrack entries and connection information
-*   Ability to conntrack add entries from lua programs that need to perform NAT. Example use case - L7 load balancing using netfilter in lua
-*   Ability to perform NAT for atleast inet protocols
-
-#### Prerequisites
-
-*   Lua and C programming languages
-*   Linux Networking
-*   Experience with Linux Kernel (highly desirable)
-*   Experience with Netfilter subsystem (good to have)
-
-#### Skill level
-
-*  Challenging
-
-#### Project size
-
-*  Medium (175 hours) or Large (350 hours)
-
-#### Mentors
-
-*  [Lourival Vieira Neto](mailto:lourival.neto@gmail.com)
-*  [Mohammad Shehar Yaar Tausif](mailto:sheharyaar48@gmail.com)
-
-#### Matrix room
-
-* [#lunatik](https://matrix.to/#/#lunatik:matrix.org)
-
-* * *
-
 ### Add support for prepared statements for LuaSQL
 
 ['LuaSQL'](https://github.com/lunarmodules/luasql) is a generic interface from Lua to a DBMS. It aims at portability over performance, but it allows extensions to suit the particularities of each DBMS.
@@ -209,52 +142,6 @@ This project proposes the addition of a minimal API that would allow each driver
 
 * * *
 
-### Lunatik Binding for Linux Traffic Control (TC) and eBPF Maps
-
-This project aims to create **Lunatik bindings for the Linux Traffic Control (TC) subsystem and eBPF maps** to enable efficient and programmable network traffic control. These bindings will allow **Lua scripts** to manipulate TC and interact with **eBPF maps**, providing a flexible interface for traffic shaping, filtering, and monitoring.
-
-This work is **heavily inspired by** the [luaxdp](https://github.com/luainkernel/lunatik?tab=readme-ov-file#xdp) binding, which integrates Lua with **XDP (eXpress Data Path)** using eBPF. Given that **TC and XDP both utilize eBPF**, this new binding (*luatc*) will **reuse and adapt parts of the luaxdp codebase**, ensuring consistency and maintainability.
-
-[Linux Traffic Control (TC)](https://man7.org/linux/man-pages/man8/tc.8.html) is a subsystem of the Linux kernel that allows administrators to **manage network packet transmission**, enabling features like **traffic shaping, queuing, scheduling, and policing**. It is widely used for **bandwidth control, Quality of Service (QoS), and network performance optimization**.
-
-Configuring TC using traditional tools can be **complex and static**, making it difficult to implement **custom traffic processing logic**. **Lunatik**, a Lua-based kernel scripting interface, can simplify this process by allowing users to write **Lua scripts** that dynamically interact with **TC queuing disciplines (qdiscs), classes, and filters**.
-
-Additionally, this project will introduce **support for eBPF maps** within Lunatik. [eBPF maps](https://docs.kernel.org/bpf/maps.html) are a key component of eBPF, providing **efficient storage and retrieval of structured data between user space and kernel space**. This functionality will **not be restricted to the TC binding (*luatc*)**, but will be implemented **as a general feature in Lunatik**, enabling **other kernel extensions** to leverage eBPF maps.
-
-#### Expected results
-
-* A fully functional **Lunatik binding for the TC subsystem**, allowing Lua scripts to configure and manipulate network traffic.
-* **Support for eBPF maps in Lunatik**, enabling efficient **data sharing between Lua scripts and eBPF programs**.
-* **Integration with the existing luaxdp codebase**, reusing and adapting components where possible.
-* **Clear documentation and examples**, demonstrating how to use *luatc* for **network traffic control** and **eBPF maps for data storage**.
-
-#### Prerequisites
-
-*   Lua and C programming languages
-*   Linux Networking
-*   Experience with Linux Kernel (highly desirable)
-*   Experience with Traffic Control (TC) subsystem (good to have)
-*   Experience with eBPF maps (good to have)
-
-#### Skill level
-
-*  Challenging
-
-#### Project size
-
-*  Large (350 hours)
-
-#### Mentors
-
-*  [Lourival Vieira Neto](mailto:lourival.neto@gmail.com)
-*  [Savio Sena](mailto:savio.sena@gmail.com)
-*  [Carlos Carvalho](carloslack@gmail.com)
-
-#### Matrix room
-
-* [#lunatik](https://matrix.to/#/#lunatik:matrix.org)
-
-* * *
 
 ### Bring the libcurl Lua Binding Up to Date and Make it More Lua Friendly
 
@@ -480,6 +367,139 @@ interface in their Lua programs.
 
 ***
 
+### Lunatik Binding for Linux Traffic Control (TC) and eBPF Maps
+
+This project aims to create **Lunatik bindings for the Linux Traffic Control (TC) subsystem and eBPF maps** to enable efficient and programmable network traffic control. These bindings will allow **Lua scripts** to manipulate TC and interact with **eBPF maps**, providing a flexible interface for traffic shaping, filtering, and monitoring.
+
+This work is **heavily inspired by** the [luaxdp](https://github.com/luainkernel/lunatik?tab=readme-ov-file#xdp) binding, which integrates Lua with **XDP (eXpress Data Path)** using eBPF. Given that **TC and XDP both utilize eBPF**, this new binding (*luatc*) will **reuse and adapt parts of the luaxdp codebase**, ensuring consistency and maintainability.
+
+[Linux Traffic Control (TC)](https://man7.org/linux/man-pages/man8/tc.8.html) is a subsystem of the Linux kernel that allows administrators to **manage network packet transmission**, enabling features like **traffic shaping, queuing, scheduling, and policing**. It is widely used for **bandwidth control, Quality of Service (QoS), and network performance optimization**.
+
+Configuring TC using traditional tools can be **complex and static**, making it difficult to implement **custom traffic processing logic**. **Lunatik**, a Lua-based kernel scripting interface, can simplify this process by allowing users to write **Lua scripts** that dynamically interact with **TC queuing disciplines (qdiscs), classes, and filters**.
+
+Additionally, this project will introduce **support for eBPF maps** within Lunatik. [eBPF maps](https://docs.kernel.org/bpf/maps.html) are a key component of eBPF, providing **efficient storage and retrieval of structured data between user space and kernel space**. This functionality will **not be restricted to the TC binding (*luatc*)**, but will be implemented **as a general feature in Lunatik**, enabling **other kernel extensions** to leverage eBPF maps.
+
+#### Expected results
+
+* A fully functional **Lunatik binding for the TC subsystem**, allowing Lua scripts to configure and manipulate network traffic.
+* **Support for eBPF maps in Lunatik**, enabling efficient **data sharing between Lua scripts and eBPF programs**.
+* **Integration with the existing luaxdp codebase**, reusing and adapting components where possible.
+* **Clear documentation and examples**, demonstrating how to use *luatc* for **network traffic control** and **eBPF maps for data storage**.
+
+#### Prerequisites
+
+*   Lua and C programming languages
+*   Linux Networking
+*   Experience with Linux Kernel (highly desirable)
+*   Experience with Traffic Control (TC) subsystem (good to have)
+*   Experience with eBPF maps (good to have)
+
+#### Skill level
+
+*  Challenging
+
+#### Project size
+
+*  Large (350 hours)
+
+#### Mentors
+
+*  [Lourival Vieira Neto](mailto:lourival.neto@gmail.com)
+*  [Savio Sena](mailto:savio.sena@gmail.com)
+*  [Carlos Carvalho](carloslack@gmail.com)
+
+#### Matrix room
+
+* [#lunatik](https://matrix.to/#/#lunatik:matrix.org)
+
+* * *
+
+### Port Lua Test Suite to Lunatik
+
+[Lunatik](https://github.com/luainkernel/lunatik/) is a framework for scripting the Linux kernel with Lua. For example, Lunatik can be used for scripting the Linux networking subsystem (as presented at Netdev [0x14](https://netdevconf.info/0x14/session.html?talk-linux-network-scripting-with-lua) and [0x17](https://netdevconf.info/0x17/sessions/talk/scripting-the-linux-routing-table-with-lua.html)) among other [examples](https://github.com/luainkernel/lunatik#examples).
+
+The purpose of this project is to port the [Lua Test Suite](https://www.lua.org/tests/) to Lunatik. That is, to adapt scripts from the Lua Test Suite and develop a Linux loadable kernel module containing its C portion. This project might leverage the [GSoC 2015 project](http://www.lua.inf.puc-rio.br/gsoc/blog2015.html#kerneltest) developed by [Guilherme Salazar](/cdn-cgi/l/email-protection#2a4d59506a4b49470445584d), which ported the Lua Test Suite to the [NetBSD kernel](https://man.netbsd.org/lua.4).
+
+The main difference between the kernel Lua and regular user-level Lua is that kernel Lua doesn't have support for standard libraries that depend on operating system (e.g., io and os) and for floating-point numbers.
+
+#### Expected results
+
+*   Adapted test scripts for Lunatik
+*   Lunatik library for testing the Lua C API
+*   Test Report at least for x86\_64 and ARM64
+
+#### Prerequisites
+
+*   Lua and C programming languages
+*   Experience with the Lua-C API (nice to have)
+*   Experience with Linux kernel (nice to have)
+
+#### Skill level
+
+*  Beginner
+
+#### Project size
+
+*  Small (90 hours) or Medium (175 hours)
+
+#### Mentors
+
+*  [Guilherme Salazar](mailto:gsz@acm.org)
+*  [Lourival Vieira Neto](mailto:lourival.neto@gmail.com)
+
+#### Matrix room
+
+* [#lunatik](https://matrix.to/#/#lunatik:matrix.org)
+
+* * *
+
+### Conntrack and NAT support for Lunatik
+
+Connection tracking (conntrack) is a fundamental component of the Linux kernel's networking stack. It is part of the Netfilter framework and is responsible for monitoring active network connections passing through the system. Conntrack maintains a state table, allowing the kernel to track packets as part of a flow and apply connection-oriented filtering, NAT (Network Address Translation), and stateful firewalling.
+
+NAT is used to modify IP addresses and ports in packet headers to facilitate address translation, load balancing, and security enforcement. The Linux kernel provides APIs to manipulate NAT and connection tracking through the Netfilter framework.
+
+The purpose of this project is to port conntrack and NAT data structures and kernel APIs to lunatik. These are present under:
+*   `net/netfilter/conntrack.h`
+*   `net/netfilter/nf_conntrack_common.h`
+*   `net/netfilter/conntrack_tuple.h`
+*   `net/netfilter/nf_conntrack_core.h`
+*   `net/netfilter/nf_nat.h`
+
+This projects builds upon the GSoC 2024 Project ['Lunatik binding for Netfilter'](https://summerofcode.withgoogle.com/archive/2024/projects/BIJAPZjf). For complete reference on the relevant kernel headers and data structures, refer to the following [gist](https://gist.github.com/sheharyaar/cbbd43037fa43fd391e52964347a2bc9).
+
+#### Expected results
+
+*   Allow fetching the conntrack entries and connection information
+*   Ability to conntrack add entries from lua programs that need to perform NAT. Example use case - L7 load balancing using netfilter in lua
+*   Ability to perform NAT for atleast inet protocols
+
+#### Prerequisites
+
+*   Lua and C programming languages
+*   Linux Networking
+*   Experience with Linux Kernel (highly desirable)
+*   Experience with Netfilter subsystem (good to have)
+
+#### Skill level
+
+*  Challenging
+
+#### Project size
+
+*  Medium (175 hours) or Large (350 hours)
+
+#### Mentors
+
+*  [Lourival Vieira Neto](mailto:lourival.neto@gmail.com)
+*  [Mohammad Shehar Yaar Tausif](mailto:sheharyaar48@gmail.com)
+
+#### Matrix room
+
+* [#lunatik](https://matrix.to/#/#lunatik:matrix.org)
+
+* * *
+
 ### Lunatik Binding for Netlink
 
 This project aims to implement a Netlink binding for Lunatik, allowing Lua
@@ -635,4 +655,3 @@ implementations in terms of performance and code clarity.
 *  [#lunatik](https://matrix.to/#/#lunatik:matrix.org)
 
 ***
-
