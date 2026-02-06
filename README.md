@@ -739,6 +739,7 @@ implementations in terms of performance and code clarity.
 
 *  [Lourival Vieira Neto](mailto:lourival.neto@gmail.com)
 *  [Mohammad Shehar Yaar Tausif](mailto:sheharyaar48@gmail.com)
+*  [Enderson Maia](mailto:endersonmaia@gmail.com)
 
 #### Matrix room
 
