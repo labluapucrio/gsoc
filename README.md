@@ -19,6 +19,7 @@ Please use our [application template](/apply.md) to prepare your proposal and ta
 
 ### General Lua Projects
 
+*   [Evaluating Structured Reactive Patterns in Atmos](#evaluating-structured-reactive-patterns-in-atmos)
 *   [Add Video Support to pico-sdl and pico-lua](#add-video-support-to-pico-sdl-and-pico-lua)
 *   [Prepared Statements for LuaSQL](#add-support-for-prepared-statements-for-luasql)
 
@@ -48,6 +49,97 @@ to script the Linux kernel in Lua.
 * * *
 
 ## Detailed Description of Project Ideas
+
+### Evaluating Structured Reactive Patterns in Atmos
+
+[Atmos](https://github.com/atmos-lang/atmos/) is an experimental
+programming language that compiles to Lua 5.4 and reconciles structured
+concurrency and event-driven programming.
+
+[pico-lua](https://github.com/fsantanna/pico-sdl/tree/main/lua/) is a a Lua
+binding to [pico-sdl](https://github.com/fsantanna/pico-sdl/)), a graphics
+library for 2D games and applications based on SDL.
+
+In this project, we will combine Atmos with pico-lua ("pico-atmos") to
+develop graphical applications using structured reactive primitives, such as
+`await`/`emit`, `par`/`par_or`/`par_and`, and `spawn`/`task`.
+
+A [previous case study](https://fsantanna.github.io/pingus/) rewrote
+the game logic of [Pingus](https://pingus.github.io/) using structured reactive
+programming.
+That study identified **5 control-flow patterns** commonly found in
+game development:
+
+1.  **Finite State Machines** --- entities whose behavior maps event
+    occurrences to transitions between states (e.g., double-click
+    detection, character animations).
+2.  **Continuation Passing** --- long-lasting activities that carry an
+    action to execute next upon completion (e.g., interactive dialogs,
+    menu transitions).
+3.  **Dispatching Hierarchies** --- container entities that
+    automatically forward stimuli to managed children (e.g., redraw and
+    update callbacks).
+4.  **Lifespan Hierarchies** --- container entities whose termination
+    automatically destroys managed children (e.g., UI containers,
+    particle systems).
+5.  **Signaling Mechanisms** --- entities that communicate explicitly
+    when no hierarchy relationship exists between them (e.g., key
+    shortcuts, screen pausing).
+
+This project proposes to **port an existing graphical application to
+pico-atmos**, systematically applying and evaluating these patterns.
+
+The contributor will select a game (written in any language) that contemplate
+these five patterns above.
+Good candidates include well-known open-source games with menus, animations,
+entity hierarchies, and inter-entity communication --- for example, games built
+with [LÖVE](https://love2d.org/) or other Lua frameworks.
+
+The project has two interleaved tracks:
+
+*   **Implementation** --- Incrementally port the game to pico-atmos,
+    replacing callbacks, state variables, and dispatching code with
+    Atmos constructs (`await`/`emit`, `par`/`par_or`, `spawn`, `task`,
+    pattern matching, etc.).
+*   **Evaluation** --- For each rewritten module, classify the applied
+    patterns, compare lines of code, and document qualitative observations
+    (readability, expressiveness, limitations encountered).
+
+#### Expected results
+
+*   A port of the chosen application running on pico-atmos.
+*   A document evaluating the control-flow patterns and the whole process.
+*   Source code published in a public repository with clear commit
+    history showing the incremental porting process.
+
+#### Prerequisites
+
+*   Programming experience in Lua and at least one other language
+    (C, C++, or Python).
+*   Familiarity with 2D game development concepts (game loop, sprites,
+    collision detection, state machines).
+*   Willingness to learn Atmos (the
+    [manual](https://github.com/atmos-lang/atmos/blob/main/doc/manual-out.md)
+    and existing games
+    [Birds](https://github.com/atmos-lang/pico-birds/) and
+    [Rocks](https://github.com/atmos-lang/pico-rocks/) serve as
+    learning material).
+*   Reading the Pingus case study:
+    [web version](https://fsantanna.github.io/pingus/) and
+    [SBGames 2018 paper](http://www.ceu-lang.org/chico/ceu_sbgames18_pre.pdf).
+
+#### Skill level
+
+*   Hard
+
+#### Project size
+
+*   Medium (175 hours) or Large (350 hours), depending on the
+    complexity of the chosen game.
+
+#### Mentors
+
+*   [Francisco Sant'Anna](mailto:francisco.santanna@gmail.com)
 
 ### Add Video Support to pico-sdl and pico-lua
 
