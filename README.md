@@ -478,7 +478,7 @@ unprecedented experimentation.
 ### Some explorations to get started
 
 *   ['The OpenRTX Project'](https://openrtx.org/#/)
-*   ['The M17 Project'](hhttps://m17project.org/)
+*   ['The M17 Project'](https://m17project.org/)
 *   ['The Miosix OS Kernel'](https://miosix.org/)
 *   ['The Lua Integration Guide'](https://lua.msys.ch) by Marc Balmer
 
