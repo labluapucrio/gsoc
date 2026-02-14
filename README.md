@@ -33,6 +33,7 @@ written in C/C++, typically libraries, to Lua programs.
 *   [Extend the Server Side Only Lua Websocket Module with a Websocket Client](#extend-the-server-side-only-lua-websocket-module-with-a-websocket-client)
 *   [Update the LuaPGSQL Module to PostgreSQL 18](#update-the-luapgsql-module-to-postgresql-18)
 *   [A Comprehensive Lua Module for Linux](#a-comprehensive-lua-module-for-linux)
+*   [Integrate Lua into OpenRTX, the Free and Open Source Firmware for Digital Ham Radios](#integrate-lua-into-openrtx-the-free-and-open-source-firmware-for-digital-ham-radios)
 
 ### Lunatik
 
@@ -450,6 +451,63 @@ interface in their Lua programs.
 
 *  [Marc Balmer](mailto:mhbalmer@gmail.com)
 *  [Thijs Schreijer](thijs@thijsschreijer.nl)
+
+#### Matrix room
+
+* [#lua-integration](https://matrix.to/#/#lua-integration:matrix.org)
+
+***
+
+### Integrate Lua into OpenRTX, the Free and Open Source Firmware for Digital Ham Radios
+
+Most firmware for digital ham radios is proprietary and uses patented commercial
+voice codecs based on the AMBE+2 chips made by HSI.
+
+OpenRTX, on the other hand, provides a completely free, non patent-encumbered
+alternative that uses the M17 protocol for voice and data communication.  M17
+uses the free and opensource Code 2 voice codec.
+
+Making OpenRTX scriptable pursues several goals:  First it is another showcase
+of integrating Lua into an operating system kernel, something that has
+previously been done for the Linux and NetBSD kernel, with the difference that
+OpenRTX, which uses the Miosix kernel, runs in a restricted embedded
+environment. Secondly, having a radio that can be scripted allows for new
+applications that have never been done before with a radio.  It opens a door to
+unprecedented experimentation.
+
+### Some explorations to get started
+
+*   ['The OpenRTX Project'](https://openrtx.org/#/)
+*   ['The M17 Project'](hhttps://m17project.org/)
+*   ['The Miosix OS Kernel'](https://miosix.org/)
+*   ['The Lua Integration Guide'](https://lua.msys.ch) by Marc Balmer
+
+#### Expected results
+
+*   Make OpenRTX scriptable
+*   Add a comprehensive set of example scripts
+*   Test and document everything
+
+#### Prerequisites
+
+*   Be proficient in the C programming language
+*   Experience with the Lua C API
+*   Experience with Lua
+*   Experience with embedded system
+*   Have an amateur radio license and callsign
+
+#### Skill level
+
+*  Advanced
+
+#### Project size
+
+*  Large (350 hours)
+
+#### Mentors
+
+*  [Marc Balmer](mailto:mhbalmer@gmail.com) HB9SSB
+
 
 #### Matrix room
 
