@@ -507,6 +507,7 @@ unprecedented experimentation.
 #### Mentors
 
 *  [Marc Balmer](mailto:mhbalmer@gmail.com) HB9SSB
+*  [Silvano Seva](mailto:silseva@fastwebnet.it) IU2KWO, OpenRTX project leader
 
 
 #### Matrix room
