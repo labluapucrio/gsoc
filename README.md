@@ -48,6 +48,12 @@ to script the Linux kernel in Lua.
 *   [Lunatik Binding for OpenWrt UBUS](#lunatik-binding-for-openwrt-ubus)
 *   [Lunatik Binding for sched-ext](#lunatik-binding-for-sched-ext)
 
+### Pallene
+
+Pallene is a typed dialect of Lua, designed to write performant code that is interoperable with Lua.
+
+* [Improve the Pallene Installer](#improve-the-pallene-installer)
+
 * * *
 
 ## Detailed Description of Project Ideas
@@ -806,3 +812,32 @@ implementations in terms of performance and code clarity.
 *  [#lunatik](https://matrix.to/#/#lunatik:matrix.org)
 
 ***
+
+### Improve the Pallene Installer
+
+Pallene is a typed dialect of Lua designed to write code that is fast and interoperable with Lua.
+Because Pallene modifies the Lua runtime, Pallene code can't run on top of a stock Lua installation.
+It needs to run on a patched version of the Lua interpreter, and makes use of a handful of runtime libraries written in C.
+This means that installing Pallene isn't as simple as running "luarocks install", as would be the case with other Lua projects.
+
+The goal of this GSOC project is to design a simpler, more accessible, and more portable process for building and installing Pallene.
+This may involve vendoring dependencies that are currently spread over multiple Git repositories and deveoping new installation scripts.
+
+Due to the nature of this project, it is important that we develop a solid plan before the implementation period starts.
+We expect that proposals should include an itemized list of planned taks, together with a timeline and expected milestones.
+You should get in touch with the project mentors early and get acquainted with Pallene and its build system.
+
+#### Prerequisites
+
+*  Lua and C programming languages
+*  Experience with Unix shell (Bash, Make, C compilers)
+*  Nice to have: experience with Luarocks packaging
+
+#### Project size
+
+*  Medium (175)
+
+#### Mentors
+
+*  [Hugo Musso Gualandi](mailto:hugomg@ic.ufrj.br)
+*  [Luiz Romario Rios](mailto:luizromario@gmail.com)
