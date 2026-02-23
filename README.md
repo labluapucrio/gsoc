@@ -859,7 +859,7 @@ The purpose of this project is to advance the [`terminal.lua` library](https://g
 
 - progress indicators/bars
 - prompts; yes/no, ok/cancel
-- reading inputs boxes; reading a filename or other strings, in a predetermined screen area
+- reading inputs boxes
 - hidden inputs; for secrets
 - More complex full screen app support (panels, drawing/re-drawing)
 - etc.
@@ -878,10 +878,13 @@ The library is general purpose, adhering the the Lua principle of 'mechanisms ov
 #### Expected results
 
 - API that makes it easy to work around terminal limitations
-- API design with consistency across platforms
-- dialog design, including prompts
-- updated `terminal.lua` build on top of LuaSystem, ready for a first release
-- works on Windows and Posix
+- API design with consistency across platforms (and review existing code for inconsistencies)
+- dialog design
+- prompts (yes/no/cancel, ok/cancel, and similar)
+- filepicker
+- viewport for editboxes/editline
+- working luarocket example application
+- updated `terminal.lua` build on top of LuaSystem, ready for a first release by end of GSoC
 - including tests, documentation and examples
 
 #### Prerequisites
