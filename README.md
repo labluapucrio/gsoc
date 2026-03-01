@@ -213,13 +213,21 @@ construct a timeline.
 
 The inclusion of support for prepared statements in LuaSQL has been discussed thoroughly some time ago, but since each DBMS offers very different APIs there is no standard that could be defined to assure portability between them. Anyway the demand persists.
 
-This project proposes the addition of a minimal API that would allow each driver to offer prepared statements according to its DBMS restrictions and mechanisms.
+This project proposes the addition of a minimal API that would allow each driver to offer prepared statements according to its DBMS restrictions and mechanisms. Each driver could implement particular extensions to the common API.
+
+The common API should offer:
+
+*   A new method in the connection object, `prepare`, to allow the creation of a prepared statement
+*   A new object, Statement, that will represent the prepared statement and offer the following methods:
+    *   `bind`
+    *   `execute`
+    *   `close`
 
 #### Expected results
 
-*   Propose a new API that would be flexibly enough to cover the main features of each database respecting each different mechanisms of defining prepared statements
-*   Implement the new API into one or more drivers
+*   Implement the common API into one driver
 *   Test and document everything
+*   Optionally implement extensions
 
 #### Prerequisites
 
@@ -242,6 +250,7 @@ This project proposes the addition of a minimal API that would allow each driver
 
 #### Matrix room
 
+* [#luasql](https://matrix.to/#/#luasql:matrix.org)
 * [#lunarmodules](https://matrix.to/#/#lunarmodules:matrix.org)
 
 * * *
