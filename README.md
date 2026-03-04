@@ -14,7 +14,7 @@ How to participate and apply
 
 Due to the rise of AI usage which is overwhelming the GSoC mentors, and OpenSource projects in general, we have decided to change the criteria for GSoC 2026. We assume positive intent when students use AI, yet we have found that students are overly confident in the results of AI agents/bots. So were we previously relied mostly on the proposals, we no longer do. Here's what we expect from students (every item is required, in the order listed):
 
-- **communicate!** if you're interested in participating, then let us know. Details for contacting mentors or matrix-channels are listed with the projects below. Ask for guidance, or clarification for things you do not understand, we're here to help.
+- **communicate!** if you're interested in participating, then let us know. Details for contacting mentors or matrix-channels are listed with the projects below. Ask for guidance, or clarification for things you do not understand, we're here to help. Project proposals submitted with no previous communication with a project mentor will not be evaluated.
 - **meaningful contributions;** get involved in the code base, show you understand the project, the patterns, the architecture. PR's are a great way of doing so. If this seems a daunting task, ask for help.
 - deliver a **meaningful proposal** in time. Please use our [application template](/apply.md) to prepare your proposal and take a look at our [successful projects](http://www.lua.inf.puc-rio.br/gsoc/blog2025.html) from last year.
 
