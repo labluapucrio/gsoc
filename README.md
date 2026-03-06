@@ -898,6 +898,7 @@ The library is general purpose, adhering the the Lua principle of 'mechanisms ov
 - what does LuaSystem offer for platform compatibility, see [LuaSystem terminal docs](https://lunarmodules.github.io/luasystem/topics/03-terminal.md.html)
 - check the [existing code base](https://github.com/lunarmodules/terminal.lua)
 
+
 #### Expected results
 
 - API that makes it easy to work around terminal limitations
@@ -910,14 +911,23 @@ The library is general purpose, adhering the the Lua principle of 'mechanisms ov
 - updated `terminal.lua` build on top of LuaSystem, ready for a first release by end of GSoC
 - including tests, documentation and examples
 
-#### Prerequisites
+#### Requirements
 
-- Lua programming language
+- basic Lua programming language knowledge
 - Experience with terminals (nice to have)
+- a proposal of max 6 pages; 1 page generics, 1 to 5 pages of project specific content.
+- daily communications during the project in YTB format (Y: what I did yesterday, T: what I plan to do today, B: blockers that limit my progress)
 
 #### Skill level
 
 - Beginner
+
+#### AI policy
+
+- The project proposal must be written without the help of AI
+- Using AI for research, testing ideas, get feedback, listing test cases is allowed
+- Using AI as an auto-complete in an editor is allowed
+- Generating code or tests is allowed, but the mentor reserves the right to disallow it on an individual basis. This depends on the quality of the code, whether it was reviewed by the author, how well it was manually tested locally, and how much understanding of the code base is shown in the PR. 
 
 #### Project size
 
