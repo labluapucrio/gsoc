@@ -9,12 +9,26 @@ In this page we introduce some of the projects that are are working with us this
 
 If you are a contributor candidate, feel free to get in touch with us via our [Matrix](https://matrix.to/#/#lablua:matrix.org), [mailing list](mailto:labluagsoc@googlegroups.com) or by sending an email to one of our mentors. You can apply using one of the ideas in the list or you can bring your own idea. Either way, don't leave it to the last minute =).
 
-Please use our [application template](/apply.md) to prepare your proposal and take a look at our [successful projects](http://www.lua.inf.puc-rio.br/gsoc/blog2025.html) from last year.
+How to participate and apply
+----------------------------
+
+Due to the rise of AI usage which is overwhelming the GSoC mentors, and OpenSource projects in general, we have decided to change the criteria for GSoC 2026. We assume positive intent when students use AI, yet we have found that students are overly confident in the results of AI agents/bots. So were we previously relied mostly on the proposals, we no longer do. Here's what we expect from students (every item is required, in the order listed):
+
+- **communicate!** if you're interested in participating, then let us know. Details for contacting mentors or matrix-channels are listed with the projects below. Ask for guidance, or clarification for things you do not understand, we're here to help. Project proposals submitted with no previous communication with a project mentor will not be evaluated.
+- **meaningful contributions;** get involved in the code base, show you understand the project, the patterns, the architecture. PR's are a great way of doing so. If this seems a daunting task, ask for help.
+- deliver a **meaningful proposal** in time. Please use our [application template](/apply.md) to prepare your proposal and take a look at our [successful projects](http://www.lua.inf.puc-rio.br/gsoc/blog2025.html) from last year.
+
+AI usage
+--------
+GSoC is about learning and growing your personal skills. Using AI to code for you will not help you reach that goal. If you are eager to learn, then don't use AI to write your code. AI is improving quickly and provides great opportunities for research and learning, but you should write your own code.
+
+We further ask you not to use an AI to create a "smart" looking application for any of the proposed projects. Instead do your homework, look at the prerequisites and starting points we provided you with. Get familiar with the code base and only then write your application, in your words, using your skills. *Any proposal that is generated using AI will NOT be evaluated!*
+
+TLDR: As mentors we're here to mentor you, not your bot.
 
 | :exclamation:  Important note on AI usage |
 |:---------------------------|
-| GSoC is about learning and growing your personal skills. Using AI to code for you will not help you reach that goal. If you are eager to learn, then don't use AI to write your code. AI is improving quickly and provides great opportunities for research and learning, but you should write your own code. <br/><br/>We further ask you not to use an AI to create a "smart" looking application for any of the proposed projects.  Instead do your homework, look at the prerequisites and starting points we provided you with.  Get familiar with the code base and only then write your application, in your words, using your skills.  Use the application template we provided.<br/><br/>As mentors we're here to mentor you, not your bot.
-
+| Check for each project below what is and is not allowed wrt AI usage |
 
 * * *
 
