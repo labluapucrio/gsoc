@@ -916,7 +916,7 @@ The library is general purpose, adhering the the Lua principle of 'mechanisms ov
 - basic Lua programming language knowledge
 - Experience with terminals (nice to have)
 - a proposal of max 6 pages; 1 page generics, 1 to 5 pages of project specific content.
-- daily communications during the project in YTB format (Y: what I did yesterday, T: hat I plan to do today, B: blockers that limit my progress)
+- daily communications during the project in YTB format (Y: what I did yesterday, T: what I plan to do today, B: blockers that limit my progress)
 
 #### Skill level
 
