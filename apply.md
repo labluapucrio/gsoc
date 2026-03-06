@@ -7,6 +7,10 @@ Contributor Application - GSoC 2026
 
 Please use the template below to help prepare your GSoC project proposal. We highly recommend discussing the project with your mentor before you submit the application to Google.
 
+| :exclamation:  Important |
+|:---------------------------|
+| proposals without any prior communication, or AI generated proposals will NOT be evaluated! |
+
 The following links contain helpful information about GSOC:
 
 *   [GSoC Help Page and FAQ](https://developers.google.com/open-source/gsoc/resources)
