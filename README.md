@@ -525,6 +525,7 @@ interface in their Lua programs.
 #### Project size
 
 *  Medium (150 hours) or Large (350 hours)
+
 #### Mentors
 
 *  [Marc Balmer](mailto:mhbalmer@gmail.com)
