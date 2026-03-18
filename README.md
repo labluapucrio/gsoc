@@ -27,6 +27,7 @@ Please use our [application template](/apply.md) to prepare your proposal and ta
 *   [Extend the Server Side Only Lua Websocket Module with a Websocket Client](#extend-the-server-side-only-lua-websocket-module-with-a-websocket-client)
 *   [Update the LuaPGSQL Module to PostgreSQL 18](#update-the-luapgsql-module-to-postgresql-18)
 *   [A Comprehensive Lua Module for Linux](#a-comprehensive-lua-module-for-linux)
+*   [Binding for ELF Toolchain Library to Manipulate ELF Files](#binding-for-ELF)
 
 * * *
 
@@ -524,7 +525,6 @@ interface in their Lua programs.
 #### Project size
 
 *  Medium (150 hours) or Large (350 hours)
-
 #### Mentors
 
 *  [Marc Balmer](mailto:mhbalmer@gmail.com)
@@ -534,4 +534,28 @@ interface in their Lua programs.
 
 * [#lua-integration](https://matrix.to/#/#lua-integration:matrix.org)
 
+***
+### Binding for ELF Toolchain C Library to Manipulate ELF Files
+
+
+### Some explorations to get started
+
+*   ['elf(3) Manual Page'](https://man.netbsd.org/elf.3)
+*   ['elf(5) Manual Page'](https://man.netbsd.org/elf.5)
+
+#### Expected results
+
+*   Update to Lua 5.5 and complete an early [prototype](https://github.com/xmmswap/luaelftoolchain) that adds read-only bindings to ELF files.
+*   Design read-write binding that guarantees safe updating of ELF files from Lua scripts.
+*   Add a comprehensive set of example programs.
+*   Test and document public API of the binding.
+
+#### Prerequisites
+
+*   Be proficient in the C programming language.
+*   Experience with Lua, in particular the Lua C API.
+
+#### Mentors
+*  [Alex Nasonov](mailto:alexander.nasonov@gmail.com)
+*  [Marc Balmer](mailto:mhbalmer@gmail.com)
 ***
