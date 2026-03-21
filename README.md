@@ -872,6 +872,10 @@ You should get in touch with the project mentors early and get acquainted with P
 *  [Hugo Musso Gualandi](mailto:hugomg@ic.ufrj.br)
 *  [Romário Rios](mailto:luizromario@gmail.com)
 
+#### Matrix room
+
+- [#pallene](https://matrix.to/#/#pallene:matrix.org)
+
 ***
 
 ### Terminal UI library for Lua
