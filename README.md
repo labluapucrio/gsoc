@@ -37,6 +37,7 @@ TLDR: As mentors we're here to mentor you, not your bot.
 *   [Evaluating Structured Reactive Patterns in Atmos](#evaluating-structured-reactive-patterns-in-atmos)
 *   [Add Video Support to pico-sdl and pico-lua](#add-video-support-to-pico-sdl-and-pico-lua)
 *   [Prepared Statements for LuaSQL](#add-support-for-prepared-statements-for-luasql)
+*   [Binding for ELF Toolchain Library to Manipulate ELF Files](#binding-for-elf-toolchain-c-library-to-manipulate-elf-files)
 
 ### Lua Integration
 
@@ -269,6 +270,29 @@ The common API should offer:
 
 * * *
 
+### Binding for ELF Toolchain C Library to Manipulate ELF Files
+
+### Some explorations to get started
+
+*   ['elf(3) Manual Page'](https://man.netbsd.org/elf.3)
+*   ['elf(5) Manual Page'](https://man.netbsd.org/elf.5)
+
+#### Expected results
+
+*   Update to Lua 5.5 and complete an early [prototype](https://github.com/xmmswap/luaelftoolchain) that adds read-only bindings to ELF files.
+*   Design read-write binding that guarantees safe updating of ELF files from Lua scripts.
+*   Add a comprehensive set of example programs.
+*   Test and document public API of the binding.
+
+#### Prerequisites
+
+*   Be proficient in the C programming language.
+*   Experience with Lua, in particular the Lua C API.
+
+#### Mentors
+*  [Alex Nasonov](mailto:alexander.nasonov@gmail.com)
+*  [Marc Balmer](mailto:mhbalmer@gmail.com)
+***
 
 ### Bring the libcurl Lua Binding Up to Date and Make it More Lua Friendly
 
