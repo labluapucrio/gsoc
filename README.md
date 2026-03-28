@@ -271,6 +271,7 @@ The common API should offer:
 * * *
 
 ### Binding for ELF Toolchain C Library to Manipulate ELF Files
+ELF format for executable files is de-facto standard on UNIX systems but there is no up-to-date Lua module to parse and manipulate ELF files. Some bindings exist for an ancient Lua 5.1 version but it's unmaintained. One of the mentors started writing a new module in 2018 but that work was never finished. The aim of the project is to revive the previous attempt. In particular, a student should finish API for reading ELF files and write API for writing to ELF files from scratch. All API functions should be well tested and documented.
 
 ### Some explorations to get started
 
