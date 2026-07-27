@@ -45,7 +45,7 @@ Lua integration means to integrate Lua into an existing program written in
 C/C++ to make it scriptable and/or to provide the functionality of software
 written in C/C++, typically libraries, to Lua programs.
 
-*   [Bring the libcurl Lua Binding Up to Date and Make it More Lua Friendly](#bring-the-libcurl-lua-binding-up-to-date-and-make-it-More-lua-friendly)
+*   [Bring the libcurl Lua Binding Up to Date and Make it More Lua Friendly](#bring-the-libcurl-lua-binding-up-to-date-and-make-it-more-lua-friendly)
 *   [Extend the Server Side Only Lua Websocket Module with a Websocket Client](#extend-the-server-side-only-lua-websocket-module-with-a-websocket-client)
 *   [Update the LuaPGSQL Module to PostgreSQL 18](#update-the-luapgsql-module-to-postgresql-18)
 *   [A Comprehensive Lua Module for Linux](#a-comprehensive-lua-module-for-linux)
@@ -342,7 +342,7 @@ of using strings for options.  So this should be reworked to use strings.
 #### Mentors
 
 *  [Marc Balmer](mailto:mhbalmer@gmail.com)
-*  [Thijs Schreijer](thijs@thijsschreijer.nl)
+*  [Thijs Schreijer](mailto:thijs@thijsschreijer.nl)
 
 #### Matrix room
 
@@ -390,7 +390,7 @@ module so that Lua programs can be first class Websocket clients.
 #### Mentors
 
 *  [Marc Balmer](mailto:mhbalmer@gmail.com)
-*  [Thijs Schreijer](thijs@thijsschreijer.nl)
+*  [Thijs Schreijer](mailto:thijs@thijsschreijer.nl)
 
 #### Matrix room
 
@@ -448,7 +448,7 @@ Lua programs.
 #### Mentors
 
 *  [Marc Balmer](mailto:mhbalmer@gmail.com)
-*  [Thijs Schreijer](thijs@thijsschreijer.nl)
+*  [Thijs Schreijer](mailto:thijs@thijsschreijer.nl)
 
 #### Matrix room
 
@@ -511,7 +511,7 @@ interface in their Lua programs.
 #### Mentors
 
 *  [Marc Balmer](mailto:mhbalmer@gmail.com)
-*  [Thijs Schreijer](thijs@thijsschreijer.nl)
+*  [Thijs Schreijer](mailto:thijs@thijsschreijer.nl)
 
 #### Matrix room
 
@@ -616,7 +616,7 @@ Additionally, this project will introduce **support for eBPF maps** within Lunat
 
 *  [Lourival Vieira Neto](mailto:lourival.neto@gmail.com)
 *  [Savio Sena](mailto:savio.sena@gmail.com)
-*  [Carlos Carvalho](carloslack@gmail.com)
+*  [Carlos Carvalho](mailto:carloslack@gmail.com)
 
 #### Matrix room
 
@@ -628,7 +628,7 @@ Additionally, this project will introduce **support for eBPF maps** within Lunat
 
 [Lunatik](https://github.com/luainkernel/lunatik/) is a framework for scripting the Linux kernel with Lua. For example, Lunatik can be used for scripting the Linux networking subsystem (as presented at Netdev [0x14](https://netdevconf.info/0x14/session.html?talk-linux-network-scripting-with-lua) and [0x17](https://netdevconf.info/0x17/sessions/talk/scripting-the-linux-routing-table-with-lua.html)) among other [examples](https://github.com/luainkernel/lunatik#examples).
 
-The purpose of this project is to port the [Lua Test Suite](https://www.lua.org/tests/) to Lunatik. That is, to adapt scripts from the Lua Test Suite and develop a Linux loadable kernel module containing its C portion. This project might leverage the [GSoC 2015 project](http://www.lua.inf.puc-rio.br/gsoc/blog2015.html#kerneltest) developed by [Guilherme Salazar](/cdn-cgi/l/email-protection#2a4d59506a4b49470445584d), which ported the Lua Test Suite to the [NetBSD kernel](https://man.netbsd.org/lua.4).
+The purpose of this project is to port the [Lua Test Suite](https://www.lua.org/tests/) to Lunatik. That is, to adapt scripts from the Lua Test Suite and develop a Linux loadable kernel module containing its C portion. This project might leverage the [GSoC 2015 project](http://www.lua.inf.puc-rio.br/gsoc/blog2015.html#kerneltest) developed by [Guilherme Salazar](mailto:gsz@acm.org), which ported the Lua Test Suite to the [NetBSD kernel](https://man.netbsd.org/lua.4).
 
 The main difference between the kernel Lua and regular user-level Lua is that kernel Lua doesn't have support for standard libraries that depend on operating system (e.g., io and os) and for floating-point numbers.
 
